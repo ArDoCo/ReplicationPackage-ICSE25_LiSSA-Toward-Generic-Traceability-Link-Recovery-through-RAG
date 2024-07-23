@@ -1,0 +1,3 @@
+Vaadin UI
+
+User interface for managing UAVs  routes  and planning flights.

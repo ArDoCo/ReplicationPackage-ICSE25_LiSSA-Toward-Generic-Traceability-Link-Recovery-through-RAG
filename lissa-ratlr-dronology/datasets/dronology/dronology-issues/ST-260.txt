@@ -1,0 +1,3 @@
+investigate error in haversine distance
+
+"To see if the haversine distance is an acceptable method for computing distance  it should be compared to travel distance and laser distance.    travel distance is the distance a drone would actually have to travel to get there (accounting for the shape of the Earth and assuming that changes in altitude would be gradual).    laser distance is the distance a laser beam would travel assuming line of sight. So it would compute this distance even when a laser would need to travel through the Earth. For example  if point A was at the North Pole and point B was at the South Pole  the laser distance would tell you the distance straight through the Earth."

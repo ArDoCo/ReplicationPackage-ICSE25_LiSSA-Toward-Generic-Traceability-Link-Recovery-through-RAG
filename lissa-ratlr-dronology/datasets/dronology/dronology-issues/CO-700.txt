@@ -1,0 +1,3 @@
+Runtime Monitoring
+
+Provides basic data collection capabilities for internal data from Dronology (such as assigned flights) and data provided by the UAV (e.g.  location data and status)

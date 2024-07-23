@@ -1,0 +1,3 @@
+Route description
+
+"Add route description under the route name in the meta info bar.  Double clicking on the route description will change it to a textfield for editing (similar behavior as the name field)  When creating a new route  add a text area for adding the route description."

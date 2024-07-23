@@ -1,0 +1,3 @@
+Waypoint contextual UI
+
+"When mouse click on the waypoint  instead of removing it directly  show a Window next to the waypoint that includes (1) its information (lat  lon  altitude  and approaching speed) and (2) a button says ""remove waypoint"" -- clicking on the button will remove the waypoint."

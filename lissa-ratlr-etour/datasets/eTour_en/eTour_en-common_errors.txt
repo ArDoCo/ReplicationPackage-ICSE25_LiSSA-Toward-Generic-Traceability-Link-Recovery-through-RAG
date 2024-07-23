@@ -1,0 +1,43 @@
+"conceivable traceability link":
+FN:
+(20 because of LLM)
+
+UC1,DBRefreshmentPoint: same topic but user view vs backend
+UC13,DBTourist: UC describes single activity, target describes more broad feature set (not explicitly mentioning active/inactive) -> BeanTourist is used. BeanTourist has field "boolean active" -> maybe useful as context
+	UC25,CulturalHeritageAgencyManager: Bean has "getRatingNumber(...), not exactly "statistics"
+UC15,ControlData: "a conceivable traceability link could exist [...] <trace>no</trace>
+	UC32,OperatorAgency: "not possible to definitively establish a traceability link", but also standard ¯\_(ツ)_/¯
+UC19,AdvertisemnetAgencyManager: UC talks about banner ads, source about news. based on title meant as news? -> "wrong" focus
+UC22,ControllDataAdvertisement: standard ¯\_(ツ)_/¯
+UC24,RefreshmentPointAgencyManager: source contains "getFeedback(...)" but LLM does not talk about it -> information gets lost?
+	UC25,RefreshmentPointCommonManager
+UC33,DBTourist: LLM fails to make connection 
+
+"The requirement does not explicitly mention any specific classes or methods"
+"However, it is possible that the functionality described in the requirement could be implemented or validated using some of the methods"
+"The source code does not specifically mention <...> as described in the requirement."
+...
+
+FP:
+(1088 because of LLM)
+Wenn nicht ganz klar, wofür Methoden verwednet werden, dann möglicher vorstellbarer trace link
+UC mentions actor, therefore class representing the actor is related (UC1,BeanOperatorAgency)
+UC1,AdvacnedSearch: correctly recognizes a search ist done, doesn't interpret by whom the search is done
+UC10,DBSearchPreference: UC10 mentions results of a search described in UC9
+"<...> may cover scenarios such as <...>", "could be used for" -> "what could this be used for"
+
+ 
+
+"traceability link":
+FN:
+UC42,DBDish: "The use case describes the functionality and flow of events for deleting a menu, while the source code implements methods for clearing, inserting, modifying, and retrieving dishes from a database."
+"The requirement does not explicitly mention any specific classes or methods"
+
+FP:
+UC16,Tourist: standard ¯\_(ツ)_/¯
+UC26,DBRefreshmentPoint: modifiyRefreshmentPoint, therefore edit comment
+!UC32,TagAgencyOperatorManager: "This method is likely related to handling the modification of data, which could include password changes."
+	UC8,DBVisitPR
+
+
+

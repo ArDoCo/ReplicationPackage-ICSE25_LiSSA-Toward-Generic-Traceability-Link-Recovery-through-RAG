@@ -1,0 +1,3 @@
+Check input values (altitude and speed)
+
+"Check the user input for the altitude and speed on two places (1) the popup window for creating new waypoints and (2) the table when in edit mode. When the Save button (for the popup window) or the check mark button (for the table) is clicked  if the input altitude and/or speed are not float numbers  popup a notification saying ""Altitude and/or Transit speed must be a number."" and do not save the input values."

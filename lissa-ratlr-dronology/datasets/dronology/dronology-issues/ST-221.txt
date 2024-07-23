@@ -1,0 +1,2 @@
+Refresh drone imformation from dronology to UI
+

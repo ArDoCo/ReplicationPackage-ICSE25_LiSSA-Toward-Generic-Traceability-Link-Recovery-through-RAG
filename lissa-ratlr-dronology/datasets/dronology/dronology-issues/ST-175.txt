@@ -1,0 +1,3 @@
+Move Waypoints
+
+When an existing waypoint is selected on the map it can be dragged to another location

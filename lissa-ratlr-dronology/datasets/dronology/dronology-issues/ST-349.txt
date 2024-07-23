@@ -1,0 +1,3 @@
+Stop managing pins and polylines separately on UI
+
+"LMap already manages all pins and polylines on the map. We should not manage them again.    Get rid of  private List<LPolyline> polylines = new ArrayList<>();  and  private List<LMarker> pins = new ArrayList<>();    Instead use map.getComponentIterator() to retrieve the pins and polylines"
