@@ -1,0 +1,32 @@
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { TeammatesRouterModule } from '../../teammates-router/teammates-router.module';
+import { ContributionQuestionEditDetailsFormComponent } from './contribution-question-edit-details-form.component';
+
+describe('ContributionQuestionEditDetailsFormComponent', () => {
+  let component: ContributionQuestionEditDetailsFormComponent;
+  let fixture: ComponentFixture<ContributionQuestionEditDetailsFormComponent>;
+
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [
+        FormsModule,
+        RouterTestingModule,
+        TeammatesRouterModule,
+      ],
+      declarations: [ContributionQuestionEditDetailsFormComponent],
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ContributionQuestionEditDetailsFormComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

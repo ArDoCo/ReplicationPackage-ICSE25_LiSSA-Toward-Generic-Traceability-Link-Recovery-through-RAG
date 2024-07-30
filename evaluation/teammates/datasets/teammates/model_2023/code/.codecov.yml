@@ -1,0 +1,30 @@
+# Reference: https://docs.codecov.io/docs
+
+# Only build on master branch
+codecov:
+  branch: master
+
+# Do not allow the bot to comment on pull requests
+comment: off
+
+coverage:
+
+  # Set up color range for badge (for aesthetic purpose)
+  range: 60..80
+  round: up
+  precision: 2
+
+  # Set up additional statuses for PRs
+  status:
+    project:
+      default:
+        # allow small drop in coverage
+        threshold: 0.5%
+
+    patch:
+      default:
+        # enforce manually; sometimes used codes are not "covered" e.g. client scripts
+        threshold: 100%
+
+ignore:
+  - "src/main/java/com/google/appengine/logging/v1/*.java"

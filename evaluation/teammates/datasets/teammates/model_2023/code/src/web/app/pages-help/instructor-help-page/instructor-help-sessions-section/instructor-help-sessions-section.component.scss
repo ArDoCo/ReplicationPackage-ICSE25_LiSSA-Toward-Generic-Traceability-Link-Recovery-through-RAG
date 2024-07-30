@@ -1,0 +1,92 @@
+.background-color-light-blue {
+  background-color: #EAEFF5;
+}
+
+.background-color-light-green {
+  background-color: #E0EEEE;
+}
+
+.preview-select {
+  float: left;
+  width: 50%;
+}
+
+.ui-text {
+  font-weight: bold;
+  color: #908B8B;
+  background-color: #E6E9E9;
+  font-size: 13px;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.margin-top-30px {
+  margin-top: 30px;
+}
+
+.margin-top-15px {
+  margin-top: 15px;
+}
+
+.padding-15px {
+  padding: 15px;
+}
+
+.bg-info {
+  background-color: #E5E5E6 !important;
+}
+
+.instr-help-qn-first {
+  padding-top: 5px;
+}
+
+.instr-help-qn-last {
+  padding-bottom: 5px;
+}
+
+button {
+  text-align: left;
+}
+
+.question-basic-info {
+  padding-left: 15px;
+  font-weight: bold;
+}
+
+.section-header {
+  .fa-anchor {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .fa-anchor {
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &:hover {
+      .fa-anchor {
+        display: block;
+        opacity: 30%;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 100%;
+        }
+      }
+    }
+  }
+}
+
+.different-team-ol {
+  list-style-type: none;
+  counter-reset: elementcounter;
+  padding-left: 0;
+
+  li::before {
+    content: "Alternative " counter(elementcounter) ": ";
+    counter-increment: elementcounter;
+  }
+}

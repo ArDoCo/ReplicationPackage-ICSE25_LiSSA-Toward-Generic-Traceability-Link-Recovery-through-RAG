@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.palladiosimulator.mediastore</groupId>
+		<artifactId>mediastore-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../mediastore-parent/pom.xml</relativePath>
+	</parent>
+	
+	<artifactId>mediastore.ear.facade</artifactId>
+
+	<packaging>ear</packaging>
+	
+	<properties>
+		<!-- project.build.finalName>${project.artifactId}</project.build.finalName-->
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>mediastore.ejb.facade</artifactId>
+			<version>${project.version}</version>
+			<type>ejb</type>
+		</dependency>
+		<!--
+		 
+		<dependency>
+			<groupId>mediastore.web</groupId>
+			<artifactId>mediastore.web</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
+		 
+		
+		<dependency>
+			<groupId>mediastore.ejb.mediaaccess</groupId>
+			<artifactId>mediastore.ejb.mediaaccess</artifactId>
+			<version>1.0</version>
+			<type>ejb</type>
+		</dependency>
+		
+		<dependency>
+			<groupId>mediastore.ejb.userdbadapter</groupId>
+			<artifactId>mediastore.ejb.userdbadapter</artifactId>
+			<version>1.0</version>
+			<type>ejb</type>
+		</dependency>
+		
+		<dependency>
+			<groupId>mediastore.ejb.usermanagement</groupId>
+			<artifactId>mediastore.ejb.usermanagement</artifactId>
+			<version>1.0</version>
+			<type>ejb</type>
+		</dependency>
+		
+		<dependency>
+			<groupId>mediastore.ejb.packaging</groupId>
+			<artifactId>mediastore.ejb.packaging</artifactId>
+			<version>1.0</version>
+			<type>ejb</type>
+		</dependency> -->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<earSourceDirectory>EarContent</earSourceDirectory>
+					<generateApplicationXml>false</generateApplicationXml>
+					<version>7</version>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<finalName>${project.artifactId}</finalName>
+					<modules>
+						<ejbModule>
+							<groupId>${project.groupId}</groupId>
+							<artifactId>mediastore.ejb.facade</artifactId>
+							<bundleFileName>mediastore.ejb.facade.jar</bundleFileName>
+						</ejbModule>
+					</modules>					
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+
+</project>

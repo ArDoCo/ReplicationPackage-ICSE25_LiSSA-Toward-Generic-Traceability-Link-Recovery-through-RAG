@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InstructorCourseStudentDetailsPageComponent should snap with default fields 1`] = `
+<tm-instructor-course-student-details-page
+  __ngContext__={[Function Number]}
+  courseId="undefined"
+  hasStudentLoadingFailed="false"
+  isStudentLoading={[Function Boolean]}
+  route={[Function ActivatedRoute]}
+  statusMessageService={[Function StatusMessageService]}
+  studentEmail="undefined"
+  studentService={[Function StudentService]}
+>
+  <tm-loading-retry>
+    <tm-loading-spinner>
+      <div
+        class="loading-container"
+      >
+        <div
+          class="row spinner-border text-primary"
+          role="status"
+        />
+        <div
+          class="row text-secondary"
+        >
+          Loading...
+        </div>
+      </div>
+    </tm-loading-spinner>
+  </tm-loading-retry>
+</tm-instructor-course-student-details-page>
+`;
+
+exports[`InstructorCourseStudentDetailsPageComponent should snap with populated student 1`] = `
+<tm-instructor-course-student-details-page
+  __ngContext__={[Function Number]}
+  courseId="undefined"
+  hasStudentLoadingFailed="false"
+  isStudentLoading={[Function Boolean]}
+  route={[Function ActivatedRoute]}
+  statusMessageService={[Function StatusMessageService]}
+  student={[Function Object]}
+  studentEmail="undefined"
+  studentService={[Function StudentService]}
+>
+  <tm-loading-retry>
+    <tm-loading-spinner>
+      <div
+        class="loading-container"
+      >
+        <div
+          class="row spinner-border text-primary"
+          role="status"
+        />
+        <div
+          class="row text-secondary"
+        >
+          Loading...
+        </div>
+      </div>
+    </tm-loading-spinner>
+  </tm-loading-retry>
+</tm-instructor-course-student-details-page>
+`;

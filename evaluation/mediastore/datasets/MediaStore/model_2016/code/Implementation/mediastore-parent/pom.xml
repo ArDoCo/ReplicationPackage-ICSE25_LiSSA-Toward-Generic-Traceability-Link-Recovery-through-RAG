@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>org.palladiosimulator.mediastore</groupId>
+  <artifactId>mediastore-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <packaging>pom</packaging>
+    
+  <modules>
+  	<module>../mediastore.basic</module>
+  	<!-- ejb -->
+  	<module>../mediastore.ejb.audiowatermarking</module>
+  	<module>../mediastore.ejb.cache</module>
+  	<module>../mediastore.ejb.facade</module>
+  	<module>../mediastore.ejb.mediaaccess</module>
+  	<module>../mediastore.ejb.mediamanagement</module>
+  	<module>../mediastore.ejb.packaging</module>
+  	<module>../mediastore.ejb.reencoder</module>
+  	<module>../mediastore.ejb.tagwatermarking</module>
+  	<module>../mediastore.ejb.userdbadapter</module>
+  	<module>../mediastore.ejb.usermanagement</module>
+  	
+  	<!-- ear -->
+  	<module>../mediastore.ear.audiowatermarking</module>
+  	<module>../mediastore.ear.cache</module>
+  	<module>../mediastore.ear.facade</module>
+  	<module>../mediastore.ear.mediaaccess</module>
+  	<module>../mediastore.ear.mediamanagement</module>
+  	<module>../mediastore.ear.packaging</module>
+  	<module>../mediastore.ear.reencoder</module>
+  	<module>../mediastore.ear.tagwatermarking</module>
+  	<module>../mediastore.ear.userdbadapter</module>
+  	<module>../mediastore.ear.usermanagement</module>
+  	
+  	<!-- war -->
+  	<module>../mediastore.web</module>
+  	
+  </modules>
+</project>

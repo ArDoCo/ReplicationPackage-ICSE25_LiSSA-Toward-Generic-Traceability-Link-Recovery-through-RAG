@@ -1,0 +1,623 @@
+apply plugin: "war"
+apply plugin: "com.google.cloud.tools.appengine-appyaml"
+
+apply plugin: "checkstyle"
+apply plugin: "pmd"
+apply plugin: "com.github.spotbugs"
+apply plugin: "jacoco"
+apply plugin: "cz.habarta.typescript-generator"
+
+def checkstyleVersion = "10.3.2"
+def pmdVersion = "6.48.0"
+def spotbugsVersion = "4.7.1"
+def jacocoVersion = "0.8.8"
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "com.google.cloud.tools:appengine-gradle-plugin:2.4.4"
+        classpath "com.github.spotbugs.snom:spotbugs-gradle-plugin:5.0.9"
+        classpath("cz.habarta.typescript-generator:typescript-generator-gradle-plugin:2.36.1070") {
+            exclude group: "org.gradle"
+        }
+        classpath "com.google.guava:guava:31.1-jre"
+    }
+}
+
+configurations {
+    staticAnalysis
+}
+
+repositories {
+    mavenCentral()
+}
+
+def objectify = "com.googlecode.objectify:objectify:6.0.7"
+def testng = "org.testng:testng:7.6.1"
+
+dependencies {
+    staticAnalysis("com.puppycrawl.tools:checkstyle:${checkstyleVersion}")
+    staticAnalysis("net.sourceforge.pmd:pmd-java:${pmdVersion}")
+    staticAnalysis("com.github.spotbugs:spotbugs:${spotbugsVersion}")
+    staticAnalysis("org.jacoco:org.jacoco.build:${jacocoVersion}")
+
+    annotationProcessor(objectify)
+
+    implementation("com.google.auth:google-auth-library-oauth2-http:1.8.1")
+    implementation(platform("com.google.cloud:google-cloud-bom:0.176.0"))
+    implementation("com.google.cloud:google-cloud-datastore")
+    implementation("com.google.cloud:google-cloud-tasks")
+    implementation("com.google.cloud:google-cloud-logging")
+    implementation("com.google.code.gson:gson:2.9.0")
+    implementation("com.google.firebase:firebase-admin:9.1.1")
+    implementation("com.google.guava:guava:31.1-jre")
+    implementation(objectify)
+    implementation("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20220608.1")
+    implementation("com.helger:ph-commons:9.5.5") // necessary to add SpotBugs suppression
+    implementation("com.mailjet:mailjet-client:5.2.0")
+    implementation("com.sendgrid:sendgrid-java:4.9.3")
+    implementation("com.sun.jersey:jersey-client:1.19.4")
+    implementation("com.sun.jersey:jersey-core:1.19.4")
+    implementation("com.sun.jersey.contribs:jersey-multipart:1.19.4")
+    implementation("org.apache.solr:solr-solrj:8.11.1")
+    implementation(platform("org.eclipse.jetty:jetty-bom:10.0.13"))
+    implementation("org.eclipse.jetty:jetty-slf4j-impl")
+    implementation("org.eclipse.jetty:jetty-server")
+    implementation("org.eclipse.jetty:jetty-webapp")
+    implementation("org.eclipse.jetty:jetty-annotations")
+    implementation("org.jsoup:jsoup:1.15.2")
+
+    testAnnotationProcessor(testng)
+
+    testImplementation("com.tngtech.archunit:archunit:0.11.0")
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.seleniumhq.selenium:selenium-java:4.3.0")
+    testImplementation("com.deque.html.axe-core:selenium:4.6.0")
+    testImplementation(testng)
+    // For supporting authorization code flow locally
+    testImplementation("com.google.oauth-client:google-oauth-client-jetty:1.34.1")
+    // For using Gmail API
+    testImplementation("com.google.apis:google-api-services-gmail:v1-rev20220404-1.32.1")
+    // For using JMeter APIs
+    testImplementation("org.apache.jmeter:ApacheJMeter_core:5.5") {
+        exclude group: "org.apache.jmeter", module: "bom"
+    }
+    testImplementation("org.apache.jmeter:ApacheJMeter_http:5.5") {
+        exclude group: "org.apache.jmeter", module: "bom"
+    }
+
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir "src/main/java"
+            include "**/*.java"
+        }
+        resources {
+            srcDir "src/main/resources"
+            exclude "**/*.java"
+        }
+    }
+    test {
+        java {
+            srcDir "src/test/java"
+            srcDir "src/e2e/java"
+            srcDir "src/lnp/java"
+            srcDir "src/client/java"
+            include "**/*.java"
+        }
+        resources {
+            srcDir "src/test/resources"
+            srcDir "src/e2e/resources"
+            srcDir "src/lnp/resources"
+            srcDir "src/client/resources"
+            exclude "**/*.java"
+        }
+    }
+}
+
+tasks.withType(cz.habarta.typescript.generator.gradle.GenerateTask) {
+    jsonLibrary = "jackson2"
+    optionalAnnotations = [
+        "javax.annotation.Nullable"
+    ]
+    outputFileType = "implementationFile"
+    outputKind = "module"
+    indentString = "  "
+    jackson2Configuration = [
+        fieldVisibility: "ANY",
+        getterVisibility: "NONE",
+        isGetterVisibility: "NONE",
+        setterVisibility: "NONE",
+        creatorVisibility: "NONE",
+    ]
+    mapEnum = "asEnum"
+    nonConstEnums = true
+    noFileComment = true
+}
+
+task generateApiOutputFormat(type: cz.habarta.typescript.generator.gradle.GenerateTask) {
+    classPatterns = [
+        "teammates.ui.output.**",
+        "teammates.common.datatransfer.questions.**",
+        "teammates.common.datatransfer.logs.**",
+    ]
+    removeTypeNameSuffix = "Data"
+    outputFile = "src/web/types/api-output.ts"
+    excludeClassPatterns = [
+        "teammates.ui.output.**Builder"
+    ]
+    excludeClasses = [
+        "teammates.ui.output.SessionResultsData\$NameInfo"
+    ]
+}
+
+task generateApiRequestFormat(type: cz.habarta.typescript.generator.gradle.GenerateTask) {
+    classPatterns = [
+        "teammates.ui.request.**",
+        "teammates.common.util.EmailType"
+    ]
+    excludeClasses = [
+        "teammates.ui.request.InvalidHttpRequestBodyException"
+    ]
+    outputFile = "src/web/types/api-request.ts"
+}
+
+task generateApiConstants(type: cz.habarta.typescript.generator.gradle.GenerateTask) {
+    classPatterns = [
+        "teammates.ui.constants.**"
+    ]
+    jsonLibrary = 'jackson2'
+    outputFile = "src/web/types/api-const.ts"
+}
+
+generateApiOutputFormat.dependsOn classes
+generateApiRequestFormat.dependsOn classes
+generateApiConstants.dependsOn classes
+
+task generateTypes {
+    dependsOn generateApiOutputFormat
+    dependsOn generateApiRequestFormat
+    dependsOn generateApiConstants
+}
+
+task execScript(type: JavaExec) {
+    description "Run user defined scripts specified by project variable - userScript"
+
+    classpath = sourceSets.test.runtimeClasspath
+    if (project.hasProperty("userScript")) {
+        mainClass = "teammates.client.scripts.${project.property('userScript')}"
+    }
+}
+
+// SETUP TASKS
+
+task createConfigs {
+    description "Sets up the project by obtaining necessary files and configurations points."
+    group "Setup"
+    doLast {
+        def templatesToCopy = [
+            "gradle.template.properties",
+            "src/main/resources/build.template.properties",
+            "src/main/resources/build-dev.template.properties",
+            "src/web/environments/config.template.ts",
+            "src/test/resources/test.template.properties",
+            "src/lnp/resources/test.template.properties",
+            "src/e2e/resources/test.template.properties",
+            "src/client/resources/client.template.properties",
+            "src/main/appengine/app.template.yaml"
+        ]
+        templatesToCopy.findAll {
+            !(new File(it.replace(".template", ""))).exists()
+        }.each {
+            filename -> copy {
+                from filename
+                into filename.startsWith("src/") ? new File(filename).getParent() : "${projectDir}"
+                rename '(.*).template(.*)', '$1$2'
+            }
+        }
+    }
+}
+
+task downloadDependencies {
+    doFirst {
+        configurations.compileClasspath.resolve()
+    }
+}
+
+task downloadTestDependencies {
+    doFirst {
+        configurations.testCompileClasspath.resolve()
+    }
+}
+
+task downloadLinters {
+    doFirst {
+        configurations.staticAnalysis.resolve()
+    }
+}
+
+// RUN SERVER TASKS
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+processResources {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+processTestResources {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+task explodeWar(type: Sync) {
+    dependsOn war
+    into "${buildDir}/exploded-teammates"
+    from project.zipTree(war.archiveFile)
+    outputs.upToDateWhen { false }
+}
+
+task copyDistToExplodedWar {
+    doLast {
+        copy {
+            from "src/web/dist"
+            into explodeWar.destinationDir
+        }
+        copy {
+            from "src/web/webtools"
+            into explodeWar.destinationDir
+        }
+    }
+    mustRunAfter explodeWar
+}
+
+task serverRun(type: JavaExec) {
+    classpath "${explodeWar.destinationDir}/WEB-INF/lib/*", "${explodeWar.destinationDir}/WEB-INF/classes/."
+    mainClass = "teammates.main.Application"
+    jvmArgs "-ea", "-Djava.util.logging.config.file=${explodeWar.destinationDir}/WEB-INF/logging-dev.properties",
+            "-Djava.time.zone.DefaultZoneRulesProvider=teammates.common.util.TzdbResourceZoneRulesProvider"
+    dependsOn explodeWar, copyDistToExplodedWar
+}
+
+task runDatastoreEmulator(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = "teammates.storage.api.DatastoreEmulatorRunner"
+}
+
+appengine {
+    tools {
+        if (project.properties['cloud.sdk.home'] != null) {
+            cloudSdkHome = project.properties['cloud.sdk.home']
+        }
+    }
+    deploy {
+        String buildPropertiesPath = "${projectDir}/src/main/resources/build.properties"
+        boolean propsExists = new File(buildPropertiesPath).exists()
+        Properties props = new Properties()
+        if (propsExists) {
+            file(buildPropertiesPath).withReader {
+                props.load(it)
+            }
+        }
+        projectId = propsExists ? props['app.id'] : null
+        version = propsExists ? props['app.version'] : null
+        stopPreviousVersion = false
+        promote = false
+    }
+}
+
+task removeWarFromStagedApp {
+    doLast {
+        delete "${buildDir}/staged-app/${war.archiveFileName}"
+    }
+}
+
+task copyExplodedWarToStagedApp {
+    doLast {
+        copy {
+            from explodeWar.destinationDir
+            into "${buildDir}/staged-app"
+        }
+    }
+}
+
+task copyDistToStagedApp {
+    doLast {
+        copy {
+            from "src/web/dist"
+            into "${buildDir}/staged-app/dist"
+        }
+    }
+}
+
+appengineStage {
+    if (project.hasProperty("flex")) {
+        dependsOn explodeWar
+        finalizedBy removeWarFromStagedApp, copyExplodedWarToStagedApp, copyDistToStagedApp
+    } else {
+        dependsOn explodeWar, copyDistToExplodedWar
+        finalizedBy removeWarFromStagedApp, copyExplodedWarToStagedApp
+    }
+}
+
+// STATIC ANALYSIS TASKS
+
+def isWindows = System.getProperty("os.name").toLowerCase().contains("windows")
+
+checkstyle {
+    toolVersion = checkstyleVersion
+    configFile = file("static-analysis/teammates-checkstyle.xml")
+    configProperties = [
+        suppressions: file("static-analysis/teammates-checkstyle-suppressions.xml")
+    ]
+}
+
+pmd {
+    toolVersion = pmdVersion
+    consoleOutput = true
+    ruleSetFiles = files("static-analysis/teammates-pmd.xml", "static-analysis/teammates-pmdMain.xml")
+    ruleSets = []
+}
+
+spotbugs {
+    reportLevel = "low"
+    toolVersion = spotbugsVersion
+    includeFilter = file("$rootProject.projectDir/static-analysis/teammates-spotbugs.xml")
+}
+
+tasks.withType(com.github.spotbugs.snom.SpotBugsTask) {
+    reports {
+        xml.enabled = false
+        html.enabled = false
+        text.enabled = true
+    }
+}
+
+spotbugsMain {
+    finalizedBy "printSpotbugsMainViolations"
+}
+
+task printSpotbugsMainViolations {
+    onlyIf {
+        file("${buildDir}/reports/spotbugs/main.txt").exists()
+    }
+    doFirst {
+        print new File("${buildDir}/reports/spotbugs/main.txt").getText("UTF-8")
+    }
+}
+
+spotbugsTest {
+    finalizedBy "printSpotbugsTestViolations"
+}
+
+task printSpotbugsTestViolations {
+    onlyIf {
+        file("${buildDir}/reports/spotbugs/test.txt").exists()
+    }
+    doFirst {
+        print new File("${buildDir}/reports/spotbugs/test.txt").getText("UTF-8")
+    }
+}
+
+task lintMain {
+    dependsOn checkstyleMain, pmdMain, spotbugsMain
+}
+
+task lintTest {
+    dependsOn checkstyleTest, pmdTest, spotbugsTest
+}
+
+import org.gradle.internal.serialize.PlaceholderException
+
+def checkTestNgFailureClosure = { descriptor, result ->
+    if (result.exception instanceof PlaceholderException
+            && result.exception.toString().startsWith("org.gradle.api.internal.tasks.testing.TestSuiteExecutionException")) {
+        result.exception.printStackTrace()
+        throw new GradleException("Detected TestNG failure")
+    }
+}
+
+// Displays full exception; to be run after the test fails after the last retry
+def afterTestClosure = { descriptor, result ->
+    if (result.resultType == TestResult.ResultType.FAILURE && result.exception != null && result.exception.getMessage() != null) {
+        println ""
+
+        def msg = result.exception.getMessage()
+        def shouldDisplayAsDiff = msg.indexOf("<<[expected>") != -1
+        if (shouldDisplayAsDiff) {
+            def expectedFileName = "expected-${descriptor.getClassName()}"
+            def actualFileName = "actual-${descriptor.getClassName()}"
+            file("${expectedFileName}").text = msg[(msg.indexOf("<<[expected>") + 12)..(msg.indexOf("</expected]>>") - 1)]
+            file("${actualFileName}").text = msg[(msg.indexOf("<<[actual>") + 10)..(msg.indexOf("</actual]>>") - 1)]
+            def diffCommand = isWindows ? "FC" : "diff"
+            def process = "${diffCommand} ${expectedFileName} ${actualFileName}".execute()
+            println process.getText()
+            process.waitFor()
+            def deleteCommand = isWindows ? "del" : "rm"
+            "${deleteCommand} ${expectedFileName}".execute()
+            "${deleteCommand} ${actualFileName}".execute()
+        } else {
+            println "${result.exception.getClass().getName()}: ${result.exception.getMessage()}"
+        }
+
+        for (StackTraceElement ste : result.exception.getStackTrace()) {
+            if (ste.getClassName().contains("NativeMethodAccessorImpl")) {
+                // Everything after this line is the internal workings of TestNG, not important for us
+                println "\t..."
+                break
+            }
+            println "\tat ${ste.getClassName()}.${ste.getMethodName()}(${ste.getFileName()}:${ste.getLineNumber()})"
+        }
+    }
+}
+
+task architectureTest(type: Test) {
+    useTestNG()
+    options.suites "src/test/resources/testng-architecture.xml"
+    options.useDefaultListeners = true
+    ignoreFailures false
+    maxHeapSize = "1g"
+    reports.html.required = false
+    reports.junitXml.required = false
+    jvmArgs "-Xss2m", "-Dfile.encoding=UTF-8"
+    afterTest afterTestClosure
+    afterSuite checkTestNgFailureClosure
+    testLogging {
+        events "passed"
+    }
+}
+
+architectureTest.dependsOn testClasses
+architectureTest.shouldRunAfter lintMain, lintTest
+
+task lint {
+    description "Runs the entire static analysis tasks for back-end."
+    group "Static analysis"
+    dependsOn lintMain, lintTest, architectureTest
+}
+
+// TEST TASKS
+
+def numOfTestRetries = 4
+
+task lnpTests(type: Test) {
+    systemProperty "random.testing.seed", new Random().nextInt() // re-run tests even if they are up-to-date
+    useTestNG()
+    options.suites "src/lnp/resources/testng-lnp.xml"
+    options.useDefaultListeners = true
+    ignoreFailures false
+    maxHeapSize = "1g"
+    reports.html.required = false
+    reports.junitXml.required = false
+    jvmArgs "-Xss2m", "-Dfile.encoding=UTF-8"
+    afterTest afterTestClosure
+    afterSuite checkTestNgFailureClosure
+    testLogging {
+        events "passed", "failed", "skipped"
+    }
+    // Display the L&P test results in the build
+    def outputCache = new LinkedList<String>()
+    beforeTest { TestDescriptor td -> outputCache.clear() } // clear output cache before the test starts
+    onOutput { TestDescriptor td, TestOutputEvent toe -> // put output in the cache
+        outputCache.add(toe.getMessage())
+        while (outputCache.size() > 2) outputCache.remove() // keep only last 2 result lines
+    }
+    afterTest { TestDescriptor td ->
+        if (outputCache.size() > 0) {
+            println(" L&P results for ${td.className}:")
+            outputCache.each { print(" > $it") }
+        }
+    }
+}
+
+task componentTests(type: Test) {
+    description "Runs the full unit and integration test suite."
+    group "Test"
+    useTestNG()
+    options.suites "src/test/resources/testng-component.xml"
+    options.useDefaultListeners = true
+    ignoreFailures false
+    maxHeapSize = "1g"
+    reports.html.required = false
+    reports.junitXml.required = false
+    jvmArgs "-ea", "-Xss2m", "-Dfile.encoding=UTF-8"
+    afterTest afterTestClosure
+    afterSuite checkTestNgFailureClosure
+    testLogging {
+        events "passed"
+    }
+}
+
+task e2eTests {
+    description "Runs the full E2E test suite and retries failed test up to ${numOfTestRetries} times."
+    group "Test"
+}
+
+(1..numOfTestRetries + 1).each { id ->
+    def isFirstTry = id == 1
+    def isLastRetry = id == numOfTestRetries + 1
+
+    task "e2eTestTry${id}"(type: Test) {
+        useTestNG()
+        options.suites isFirstTry ? "src/e2e/resources/testng-e2e.xml" : file("${buildDir}/reports/e2e-test-try-${id - 1}/testng-failed.xml")
+        options.outputDirectory = file("${buildDir}/reports/e2e-test-try-${id}")
+        options.useDefaultListeners = true
+        ignoreFailures = !isLastRetry
+        maxHeapSize = "1g"
+        reports.html.required = false
+        reports.junitXml.required = false
+        jvmArgs "-Xss2m", "-Dfile.encoding=UTF-8"
+        testLogging {
+            events "passed"
+        }
+        afterTest afterTestClosure
+        if (isFirstTry) {
+            afterSuite checkTestNgFailureClosure
+        }
+        onlyIf {
+            isFirstTry || file("${buildDir}/reports/e2e-test-try-${id - 1}/testng-failed.xml").exists()
+        }
+    }
+    e2eTests.dependsOn "e2eTestTry${id}"
+}
+
+task axeTests {
+    description "Runs the full accessibility test suite and retries failed tests once."
+    group "Test"
+}
+
+(1..2).each { id ->
+    def isFirstTry = id == 1
+
+    task "axeTestTry${id}"(type: Test) {
+        useTestNG()
+        options.suites isFirstTry ? "src/e2e/resources/testng-axe.xml" : file("${buildDir}/reports/axe-test-try-${id - 1}/testng-failed.xml")
+        options.outputDirectory = file("${buildDir}/reports/axe-test-try-${id}")
+        options.useDefaultListeners = true
+        ignoreFailures = isFirstTry
+        maxHeapSize = "1g"
+        reports.html.required = false
+        reports.junitXml.required = false
+        jvmArgs "-Xss2m", "-Dfile.encoding=UTF-8"
+        testLogging {
+            events "passed"
+        }
+        afterTest afterTestClosure
+        if (isFirstTry) {
+            afterSuite checkTestNgFailureClosure
+        }
+        onlyIf {
+            isFirstTry || file("${buildDir}/reports/axe-test-try-${id - 1}/testng-failed.xml").exists()
+        }
+    }
+    axeTests.dependsOn "axeTestTry${id}"
+}
+
+// COVERAGE TASKS
+
+jacoco {
+    toolVersion = jacocoVersion
+}
+
+task jacocoReport(type: JacocoReport) {
+    description "Runs coverage session from available test run data."
+    group "Test"
+    sourceDirectories.from files(sourceSets.main.java.srcDirs)
+    classDirectories.from files(sourceSets.main.output)
+    executionData fileTree("${buildDir}/jacoco").files
+    reports {
+        xml.required = true
+        html.required = true
+    }
+    afterEvaluate {
+        classDirectories.from files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: ["**/*.jar"])
+        })
+    }
+}

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Mediastore</title>
+</h:head>
+
+<h:body>
+	<ui:composition template="/templates/commonLayout.xhtml">
+		<ui:define name="menu">
+			<ui:include src="/templates/menu.xhtml" />
+		</ui:define>
+
+		<ui:define name="main_container">
+			<p:growl id="message" showDetail="true" autoUpdate="true"
+				closable="true" />
+			<p:panel header="Files">
+
+				<!--  Add new audio record   -->
+
+				<p:commandLink id="movieBtn" value="add new file" type="button" />
+
+				<p:overlayPanel id="moviePanel" for="movieBtn" hideEffect="fade"
+					dynamic="true">
+					<h:form enctype="multipart/form-data">
+						<h:panelGrid columns="2">
+
+							<h:outputLabel for="title" value="Title:" />
+							<p:inputText id="title" value="#{uploadBean.title}"
+								required="true" label="Title" />
+
+							<h:outputLabel for="title" value="Artist:" />
+							<p:inputText id="artist" value="#{uploadBean.artist}"
+								required="true" label="artist" />
+
+							<h:outputLabel for="album" value="Album:" />
+							<p:inputText id="album" value="#{uploadBean.album}"
+								required="true" label="Album" />
+
+							<h:outputLabel for="genre" value="Genre:" />
+							<p:inputText id="genre" value="#{uploadBean.genre}"
+								required="true" label="Genre" />
+
+							<h:outputText for="year" value="Jahr:" />
+							<p:inputText id="year" value="#{uploadBean.releaseyear}"
+								label="year" required="true" />
+
+							<p:fileUpload value="#{uploadBean.file}" mode="simple"
+								update=":downloadForm:downloadTable" immediate="true" />
+							<p:commandButton value="Submit" ajax="false"
+								action="#{uploadBean.upload}" />
+
+						</h:panelGrid>
+					</h:form>
+				</p:overlayPanel>
+
+				<p:separator />
+
+				<!--  End: add record  -->
+
+				<!-- List of audio  -->
+				<h:form id="downloadForm" enctype="multipart/form-data">
+					<p:dataTable id="downloadTable" var="audio"
+						value="#{downloadBean.audios}">
+
+						<p:column style="width:50px;">
+							<p:selectBooleanCheckbox value="#{downloadBean.checked[audio]}">
+								<p:ajax event="change" listener="#{downloadBean.check}" />
+							</p:selectBooleanCheckbox>
+						</p:column>
+
+						<p:column headerText="Title">
+							<h:outputText value="#{audio.title}" />
+						</p:column>
+
+						<p:column headerText="Artist">
+							<h:outputText value="#{audio.artist}" />
+						</p:column>
+
+						<p:column headerText="Year">
+							<h:outputText value="#{audio.releaseyear}" />
+						</p:column>
+
+						<p:column headerText="Album">
+							<h:outputText value="#{audio.album}" />
+						</p:column>
+
+						<p:column headerText="Genre">
+							<h:outputText value="#{audio.genre}" />
+						</p:column>
+
+						<p:column headerText="Bitrate">
+							<p:selectOneMenu id="console" value="#{audio.bitrate}"
+								style="width:125px">
+								<f:selectItem itemLabel="Select One" itemValue="0" />
+								<f:selectItem itemLabel="128 kBit/s" itemValue="128" />
+								<f:selectItem itemLabel="192 kBit/s" itemValue="192" />
+								<f:selectItem itemLabel="256 kBit/s" itemValue="256" />
+								<f:selectItem itemLabel="320 kBit/s" itemValue="320" />
+								<p:ajax event="change" listener="#{downloadBean.check}" />
+							</p:selectOneMenu>
+						</p:column>
+
+					</p:dataTable>
+					<br />
+				</h:form>
+
+				<h:form>
+					<p:commandButton ajax="false" value="Download"
+						actionListener="#{downloadBean.download}">
+						<p:fileDownload value="#{downloadBean.file}" />
+					</p:commandButton>
+				</h:form>
+
+				<!--  End: list  -->
+
+			</p:panel>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

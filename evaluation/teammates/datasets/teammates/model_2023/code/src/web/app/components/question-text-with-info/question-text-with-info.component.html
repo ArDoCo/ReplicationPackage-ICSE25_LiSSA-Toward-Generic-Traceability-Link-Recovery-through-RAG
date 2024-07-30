@@ -1,0 +1,27 @@
+<span class="d-flex flex-column flex-sm-row align-items-sm-center">
+  <h2 *ngIf="shouldShowDownloadQuestionResult" class="question-number">
+    <button ngbTooltip="Download Question Results" type="button" class="btn btn-link p-0" (click)="downloadQuestionResultEvent.emit(); $event.stopPropagation();">
+      Question {{ questionNumber }}:
+    </button>
+  </h2>
+  <h2 *ngIf="!shouldShowDownloadQuestionResult" class="question-number">
+    Question {{ questionNumber }}:
+  </h2>
+  <span class="question-text mx-sm-2">{{ questionDetails.questionText }}</span>
+  <button class="additional-info-button info-font-size me-auto border-0 p-0 bg-transparent text-primary" (click)="additionalInfoIsExpanded = !additionalInfoIsExpanded;$event.stopPropagation()" *ngIf="hasAdditionalInfo(questionDetails)">
+    [{{ additionalInfoIsExpanded ? 'less' : 'more' }}]
+  </button>
+</span>
+
+<div class="additional-info info-font-size" *ngIf="hasAdditionalInfo(questionDetails) && additionalInfoIsExpanded">
+  <tm-contribution-question-additional-info *ngIf="questionDetails.questionType === FeedbackQuestionType.CONTRIB" [questionDetails]="questionDetails"></tm-contribution-question-additional-info>
+  <tm-text-question-additional-info *ngIf="questionDetails.questionType === FeedbackQuestionType.TEXT" [questionDetails]="questionDetails"></tm-text-question-additional-info>
+  <tm-mcq-question-additional-info *ngIf="questionDetails.questionType === FeedbackQuestionType.MCQ" [questionDetails]="questionDetails"></tm-mcq-question-additional-info>
+  <tm-msq-question-additional-info *ngIf="questionDetails.questionType === FeedbackQuestionType.MSQ" [questionDetails]="questionDetails"></tm-msq-question-additional-info>
+  <tm-rank-options-question-additional-info *ngIf="questionDetails.questionType === FeedbackQuestionType.RANK_OPTIONS" [questionDetails]="questionDetails"></tm-rank-options-question-additional-info>
+  <tm-rank-recipients-question-additional-info *ngIf="questionDetails.questionType === FeedbackQuestionType.RANK_RECIPIENTS" [questionDetails]="questionDetails"></tm-rank-recipients-question-additional-info>
+  <tm-rubric-question-additional-info *ngIf="questionDetails.questionType === FeedbackQuestionType.RUBRIC" [questionDetails]="questionDetails"></tm-rubric-question-additional-info>
+  <tm-constsum-options-question-additional-info *ngIf="questionDetails.questionType === FeedbackQuestionType.CONSTSUM_OPTIONS" [questionDetails]="questionDetails"></tm-constsum-options-question-additional-info>
+  <tm-constsum-recipients-question-additional-info *ngIf="questionDetails.questionType === FeedbackQuestionType.CONSTSUM_RECIPIENTS" [questionDetails]="questionDetails"></tm-constsum-recipients-question-additional-info>
+  <tm-num-scale-question-additional-info *ngIf="questionDetails.questionType === FeedbackQuestionType.NUMSCALE" [questionDetails]="questionDetails"></tm-num-scale-question-additional-info>
+</div>

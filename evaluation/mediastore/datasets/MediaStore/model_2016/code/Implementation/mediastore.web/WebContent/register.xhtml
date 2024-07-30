@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Mediastore</title>
+</h:head>
+
+<h:body>
+	<p:panel header="Registration" style="height:100% !important;">
+		<h:form id="registerForm" style="font-size:0.8em">
+			<p:messages id="messages" showDetail="true" autoUpdate="true" />
+			<h:panelGrid columns="2" cellpadding="15">
+
+				<h:outputLabel for="first" value="Vorname*" />
+				<p:inputText id="first" value="#{registerBean.firstName}"
+					required="true" label="Vorname" />
+
+				<h:outputLabel for="last" value="Nachname*" />
+				<p:inputText id="last" value="#{registerBean.lastName}"
+					required="true" label="Nachname" />
+
+				<h:outputLabel for="email" value="Email-Adresse*" />
+				<p:inputText id="email" value="#{registerBean.email}"
+					required="true" label="Email"
+					validatorMessage="Ungültige E-Mail-Adresse" requiredMessage="">
+
+					<f:validateRegex
+						pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
+
+				</p:inputText>
+
+				<h:outputText for="pass1" value="Passwort erstellen*" />
+				<p:password id="pass1" value="#{registerBean.password}"
+					feedback="true" match="pass2" label="Passwort" required="true" />
+
+				<h:outputText for="pass2" value="Password bestätigen*" />
+				<p:password id="pass2" value="#{registerBean.password}"
+					required="true" label="Bestätigung" />
+
+				<p:commandButton value="Ok" action="#{registerBean.doRegister}" />
+			</h:panelGrid>
+		</h:form>
+	</p:panel>
+</h:body>
+</html>
