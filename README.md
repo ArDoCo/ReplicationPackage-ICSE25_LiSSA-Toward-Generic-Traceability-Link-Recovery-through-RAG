@@ -11,16 +11,16 @@ This is the replication package for our paper "LiSSA: Retrieval-Augmented Genera
 
 ## Installation
 a. You can use the provided JAR.
-b. You can build the project using Maven using `cd lissa && mvn package` . The Jar will be created in the target folder in the lissa project (lissa/target/lissa-*-jar-with-dependencies.jar).
+b. You can build the project using Maven using `cd lissa && mvn package` . The Jar will be created in the target folder in the lissa project (lissa/target/ratlr-*-jar-with-dependencies.jar).
 
 ## Usage
 1. Select the dataset you want to use for evaluation and go to this directory. E.g., `cd evaluation/smos`
-2. Copy the jar file of LiSSA to the directory. E.g., `cp ../../lissa/target/lissa-*-jar-with-dependencies.jar .`
+2. Copy the jar file of LiSSA to the directory. E.g., `cp ../../lissa/target/ratlr-*-jar-with-dependencies.jar .`
 3. Configure your OpenAI API key and organization in a `.env` file. You can use the provided template file as a template [lissa/env-template](./lissa/env-template).
 4. To run the evaluation, you have to decide for a configuration. The configurations are located in the configs folders. E.g., the configuration for running SMOS just with retrieval is located in [evaluation/smos/configs-gpt4o/none-none-no-smos.json](./evaluation/smos/configs-gpt4o/none-none-no-smos.json).
 5. Identify the gold standard in the datasets folder. E.g., the gold standard for SMOS is located in [evaluation/smos/datasets/SMOS/UC2CC.csv](./evaluation/smos/datasets/SMOS/UC2CC.csv).
 6. LiSSA caches requests in order to be reproducible. The cache is located in the cache folder. If you want to use the cache, extract the provided tar.gz file (cache.tar.gz) and copy the cache for the project to the current location. (The cache is not directly provided in this repository due to its size.) 
-7. Run `java -jar lissa-*-jar-with-dependencies.jar eval ./datasets/SMOS/UC2CC.csv -c configs-gpt4o/none-none-no-smos.json` to run the evaluation.
+7. Run `java -jar ratlr-*-jar-with-dependencies.jar eval ./datasets/SMOS/UC2CC.csv -c configs-gpt4o/none-none-no-smos.json` to run the evaluation.
 8. The results will be printed to the console and saved to a file in the current directory. The name is also printed to the console.
 
 # Results of Evaluation
