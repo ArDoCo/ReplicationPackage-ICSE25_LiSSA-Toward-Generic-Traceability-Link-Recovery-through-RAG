@@ -1,5 +1,5 @@
-# Replication Package for "LiSSA: Retrieval-Augmented Generation for Traceability Link Recovery"
-This is the replication package for our paper "LiSSA: Retrieval-Augmented Generation for Traceability Link Recovery". This package contains the source code for the LiSSA tool, the dataset used in the evaluation, and the results of the evaluation.
+# Replication Package for "Linking Software System Artifacts: Toward Generic Traceability Link Recovery through Retrieval-Augmented Generation"
+This is the replication package for our paper "Linking Software System Artifacts: Toward Generic Traceability Link Recovery through Retrieval-Augmented Generation". This package contains the source code for the LiSSA tool, the dataset used in the evaluation, and the results of the evaluation.
 
 ## Requirements
 - Java JDK 21 + Maven 3
@@ -19,7 +19,7 @@ b. You can build the project using Maven using `cd lissa && mvn package` . The J
 3. Configure your OpenAI API key and organization in a `.env` file. You can use the provided template file as a template [lissa/env-template](./lissa/env-template).
 4. To run the evaluation, you have to decide for a configuration. The configurations are located in the configs folders. E.g., the configuration for running SMOS just with retrieval is located in [evaluation/smos/configs-gpt4o/none-none-no-smos.json](./evaluation/smos/configs-gpt4o/none-none-no-smos.json).
 5. Identify the gold standard in the datasets folder. E.g., the gold standard for SMOS is located in [evaluation/smos/datasets/SMOS/UC2CC.csv](./evaluation/smos/datasets/SMOS/UC2CC.csv).
-6. LiSSA caches requests in order to be reproducible. The cache is located in the cache folder. If you want to use the cache, extract the provided tar.gz file (cache.tar.gz) and copy the cache for the project to the current location. (The cache is not directly provided in this repository due to its size.) 
+6. LiSSA caches requests in order to be reproducible. The cache is located in the cache folder. If you want to use the cache, extract the provided tar.gz file (cache.tar.gz) and copy the cache for the project to the current location. (The cache is not directly provided in this repository due to its size.)
 7. Run `java -jar ratlr-*-jar-with-dependencies.jar eval ./datasets/SMOS/UC2CC.csv -c configs-gpt4o/none-none-no-smos.json` to run the evaluation.
 8. The results will be printed to the console and saved to a file in the current directory. The name is also printed to the console.
 
