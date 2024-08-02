@@ -1,5 +1,5 @@
-# Replication Package for "Linking Software System Artifacts: Toward Generic Traceability Link Recovery through Retrieval-Augmented Generation"
-This is the replication package for our paper "Linking Software System Artifacts: Toward Generic Traceability Link Recovery through Retrieval-Augmented Generation". This package contains the source code for the LiSSA tool, the dataset used in the evaluation, and the results of the evaluation.
+# Replication Package for "LiSSA: Toward Generic Traceability Link Recovery through Retrieval-Augmented Generation"
+This is the replication package for our paper "LiSSA: Toward Generic Traceability Link Recovery through Retrieval-Augmented Generation". This package contains the source code for the LiSSA tool, the dataset used in the evaluation, and the results of the evaluation.
 
 ## Requirements
 - Java JDK 21 + Maven 3
