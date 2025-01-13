@@ -1,0 +1,21 @@
+<div class="row padding-15px">
+  <div class="col-md-10 allow-rich-text">
+    <label>
+      <input type="checkbox"
+             [checked]="model.shouldAllowRichText"
+             (click)="triggerModelChange('shouldAllowRichText', $event.target.checked)"
+             [disabled]="!isEditable">
+      Allow rich-text formatting (e.g., bold text, links, bullet lists, colors, etc.) in the answers
+    </label>
+  </div>
+  <div class="col-12 question-recommended-length">
+    <label for="recommended-length">
+      [Optional]
+      <span class="ngb-tooltip-class" ngbTooltip="The recommended length is shown to the respondent but not enforced">
+        Recommended length
+      </span>
+      (in words) for the response:
+    </label>
+    <input id="recommended-length" type="number" class="form-control" [ngModel]="model.recommendedLength" (ngModelChange)="triggerModelChange('recommendedLength', $event)" [disabled]="!isEditable" min="1" aria-label="Recommended Length Input">
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Mediastore</title>
+	<h:outputStylesheet name="style.css" />
+</h:head>
+
+<h:body>
+
+	<p:panel header="Anmeldung"
+		style="position: absolute; left: 30%; top: 20%;">
+		<h:form enctype="multipart/form-data">
+
+			<p:growl id="message" showDetail="true" autoUpdate="true"
+				closable="true" />
+			<h:panelGrid columns="2" cellspacing="15" style="font-size:0.8em">
+
+				<h:outputText value="Email " />
+				<p:inputText name="j_username" id="j_username"
+					value="#{loginBean.username}" />
+
+				<h:outputText value="Passwort " />
+				<p:password name="j_password" id="j_password"
+					value="#{loginBean.password}" />
+
+				<p:commandButton value="Ok" action="#{loginBean.dologin}" />
+				<p:commandLink id="registerLink" action="register" value="Register" />
+			</h:panelGrid>
+		</h:form>
+	</p:panel>
+
+</h:body>
+</html>

@@ -1,0 +1,49 @@
+.no-session-message {
+  padding: 10px;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .actions-cell {
+    min-width: 410px;
+  }
+}
+
+.actions-cell button:not(.dropdown-item) {
+  margin-left: var(--btn-margin);
+}
+
+.sortable-header {
+  cursor: pointer;
+
+  i {
+    margin-left: .3em;
+  }
+
+  .fa-stack {
+    width: 20%;
+  }
+
+  button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    font: inherit;
+    cursor: inherit;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
+
+.padding-left-7px {
+  padding-left: 7px;
+}

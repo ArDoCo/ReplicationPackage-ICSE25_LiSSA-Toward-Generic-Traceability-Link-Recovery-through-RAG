@@ -1,0 +1,95 @@
+.fill-plain {
+  background-color: #EAEFF5;
+}
+
+.card-default {
+  border-color: #DDD;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  background-color: #F0F0F0;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.text-muted {
+  padding: 15px;
+  margin-bottom: 0;
+}
+
+.scroll-down :hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.status-message {
+  padding: 15px;
+}
+
+.more-info {
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+
+.more-info-point-title {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.more-info-column-info {
+  list-style: circle;
+}
+
+.more-info-sub-point-details {
+  list-style: disc;
+  margin-left: -20px;
+}
+
+.enroll-students-spreadsheet-buttons {
+  margin-top: -15px;
+}
+
+#number-of-rows {
+  margin-left: 10px;
+}
+
+.enroll-results-panel {
+  margin-bottom: 15px;
+}
+
+.existing-students-status-message {
+  font-weight: bold;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.enroll-button-group {
+  width: 50%;
+  display: inline-block;
+}
+
+.enroll-button-group * {
+  max-height: inherit;
+}
+
+table {
+  table-layout: fixed;
+  overflow-wrap: break-word;
+}
+
+table td {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.box {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}

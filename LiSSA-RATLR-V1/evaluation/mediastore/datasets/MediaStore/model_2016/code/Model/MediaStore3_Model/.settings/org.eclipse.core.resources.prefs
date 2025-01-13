@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding/InMemoryCache.getFile.seff_diagram=UTF-8
+encoding/MediaStore.download.seff_diagram=UTF-8
+encoding/WebGUI.download.seff_diagram=UTF-8
+encoding/download_only.usagemodel_diagram=UTF-8
+encoding/mediastore-many-servers.allocation_diagram=UTF-8
+encoding/mediastore-open.usagemodel_diagram=UTF-8
+encoding/mediastore-three-servers.allocation_diagram=UTF-8
+encoding/ms.repository=UTF-8
+encoding/ms.resourceenvironment=UTF-8
+encoding/ms_audio_wm.allocation=UTF-8
+encoding/ms_audio_wm.system=UTF-8
+encoding/ms_base.allocation=UTF-8
+encoding/ms_base_usage_all.usagemodel=UTF-8
+encoding/ms_base_usage_realistic.usagemodel=UTF-8

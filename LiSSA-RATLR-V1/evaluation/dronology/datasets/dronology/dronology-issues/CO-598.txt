@@ -1,0 +1,3 @@
+Simple Simulator
+
+Provides basic capabilities for simulating the flight of Virtual UAVs.

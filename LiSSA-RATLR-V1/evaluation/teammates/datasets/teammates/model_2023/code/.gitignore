@@ -1,0 +1,91 @@
+.DS_Store
+*.orig
+*.class
+*.jar
+*.ext
+*.bin
+*.bak
+*.db
+*.exe
+
+# Node.js
+node_modules/
+npm-debug.log
+coverage/*
+.eslintcache
+.stylelintcache
+
+# Gradle
+.gradle
+build/
+bin/
+!gradle-wrapper.jar
+
+# Eclipse
+.classpath
+.project
+.settings
+.launches
+test-output/*
+.checkstyle
+.eclipse-pmd
+.tern-project
+
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# VSCode
+.vscode/
+*.code-workspace
+.history/
+
+# Netbeans
+nbproject/
+nbbuild/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# JMeter
+jmeter.log
+src/lnp/resources/data/*
+src/lnp/resources/results/*
+src/lnp/resources/tests/*
+!src/lnp/resources/jmeter/bin
+
+# Angular
+.angular/cache
+
+# TEAMMATES
+gradle.properties
+build.properties
+build-dev.properties
+test.properties
+client.properties
+config.ts
+app.yaml
+geckodriver*
+chromedriver*
+api-output.ts
+api-request.ts
+api-const.ts
+src/main/resources/firebase-credentials.json
+src/client/java/teammates/client/scripts/statistics/data/
+src/client/java/teammates/client/scripts/log/
+src/e2e/resources/gmail-api/
+src/e2e/resources/downloads/
+src/web/dist/*
+src/web/webtools/*
+filestorage-dev/*
+datastore-dev/datastore/*
+
+!.gitkeep
+
+
+# Docs
+docs/_site/*
+docs/_markbind/logs/*
+.stylelintcache
+.eslintcache

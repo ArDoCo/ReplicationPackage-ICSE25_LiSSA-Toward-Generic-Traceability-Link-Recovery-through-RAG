@@ -1,0 +1,3 @@
+Make replacement simulator that Integrates N-vector position reckoning
+
+"NvecInterpolator does position reckoning in WGS-84 and a replacement simulator that uses it needs to be created     * Do movement simulator and battery simulator   * Replicate all base functionality of simple simulator "

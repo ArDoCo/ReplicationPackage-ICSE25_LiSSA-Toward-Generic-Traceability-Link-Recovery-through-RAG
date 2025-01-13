@@ -1,0 +1,3 @@
+Dynamically add/remove UAVs to follow
+
+"In the following mode  selecting new UAVs will add them to the group of UAVs that is currently following; unselecting UAVs will remove them from the group. Update the indicator bar accordingly as well.    When the last UAV is unselected  zoom out to show all UAVs (i.e. perform the function same as ""Show all UAVs on the map"")."

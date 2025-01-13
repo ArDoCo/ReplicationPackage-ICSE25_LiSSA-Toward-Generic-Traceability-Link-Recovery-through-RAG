@@ -1,0 +1,3 @@
+Nvector to LLA needs to be robust
+
+Latitude needs to be calculated using atan2. See equation 6 in http://www.navlab.net/Publications/A_Nonsingular_Horizontal_Position_Representation.pdf

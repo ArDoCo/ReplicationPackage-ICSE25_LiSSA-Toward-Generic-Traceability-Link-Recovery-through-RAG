@@ -1,0 +1,408 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StudentCourseDetailsPageComponent should snap when all data are still loading 1`] = `
+<tm-student-course-details-page
+  SortBy={[Function Object]}
+  __ngContext__={[Function Number]}
+  course={[Function Object]}
+  courseId="undefined"
+  courseService={[Function CourseService]}
+  hasLoadingFailed="false"
+  instructorDetails={[Function Array]}
+  instructorService={[Function InstructorService]}
+  isLoadingCourse={[Function Boolean]}
+  isLoadingInstructor={[Function Boolean]}
+  isLoadingStudent={[Function Boolean]}
+  isLoadingTeammates={[Function Boolean]}
+  route={[Function ActivatedRoute]}
+  statusMessageService={[Function StatusMessageService]}
+  student={[Function Object]}
+  studentService={[Function StudentService]}
+  tableComparatorService={[Function TableComparatorService]}
+  teammateProfiles={[Function Array]}
+  teammateProfilesSortBy="0"
+>
+  <tm-loading-retry>
+  </tm-loading-retry><tm-loading-spinner>
+    <div
+      class="loading-container"
+    >
+      <div
+        class="row spinner-border text-primary"
+        role="status"
+      />
+      <div
+        class="row text-secondary"
+      >
+        Loading...
+      </div>
+    </div>
+  </tm-loading-spinner>
+</tm-student-course-details-page>
+`;
+
+exports[`StudentCourseDetailsPageComponent should snap when it fails to load 1`] = `
+<tm-student-course-details-page
+  SortBy={[Function Object]}
+  __ngContext__={[Function Number]}
+  course={[Function Object]}
+  courseId="undefined"
+  courseService={[Function CourseService]}
+  hasLoadingFailed={[Function Boolean]}
+  instructorDetails={[Function Array]}
+  instructorService={[Function InstructorService]}
+  isLoadingCourse={[Function Boolean]}
+  isLoadingInstructor={[Function Boolean]}
+  isLoadingStudent={[Function Boolean]}
+  isLoadingTeammates="false"
+  route={[Function ActivatedRoute]}
+  statusMessageService={[Function StatusMessageService]}
+  student={[Function Object]}
+  studentService={[Function StudentService]}
+  tableComparatorService={[Function TableComparatorService]}
+  teammateProfiles={[Function Array]}
+  teammateProfilesSortBy="0"
+>
+  <tm-loading-retry>
+  </tm-loading-retry><div
+    class="section"
+  >
+    <div
+      class="row top-padded"
+    >
+      <div
+        class="col-md-10"
+      >
+        <table>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</tm-student-course-details-page>
+`;
+
+exports[`StudentCourseDetailsPageComponent should snap with default fields 1`] = `
+<tm-student-course-details-page
+  SortBy={[Function Object]}
+  __ngContext__={[Function Number]}
+  course={[Function Object]}
+  courseId="undefined"
+  courseService={[Function CourseService]}
+  hasLoadingFailed="false"
+  instructorDetails={[Function Array]}
+  instructorService={[Function InstructorService]}
+  isLoadingCourse={[Function Boolean]}
+  isLoadingInstructor={[Function Boolean]}
+  isLoadingStudent={[Function Boolean]}
+  isLoadingTeammates="false"
+  route={[Function ActivatedRoute]}
+  statusMessageService={[Function StatusMessageService]}
+  student={[Function Object]}
+  studentService={[Function StudentService]}
+  tableComparatorService={[Function TableComparatorService]}
+  teammateProfiles={[Function Array]}
+  teammateProfilesSortBy="0"
+>
+  <tm-loading-retry>
+  </tm-loading-retry><div
+    class="section"
+  >
+    <div
+      class="row top-padded"
+    >
+      <div
+        class="col-md-10"
+      >
+        <table>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</tm-student-course-details-page>
+`;
+
+exports[`StudentCourseDetailsPageComponent should snap with populated fields 1`] = `
+<tm-student-course-details-page
+  SortBy={[Function Object]}
+  __ngContext__={[Function Number]}
+  course={[Function Object]}
+  courseId="undefined"
+  courseService={[Function CourseService]}
+  hasLoadingFailed="false"
+  instructorDetails={[Function Array]}
+  instructorService={[Function InstructorService]}
+  isLoadingCourse="false"
+  isLoadingInstructor="false"
+  isLoadingStudent="false"
+  isLoadingTeammates="false"
+  route={[Function ActivatedRoute]}
+  statusMessageService={[Function StatusMessageService]}
+  student={[Function Object]}
+  studentService={[Function StudentService]}
+  tableComparatorService={[Function TableComparatorService]}
+  teammateProfiles={[Function Array]}
+  teammateProfilesSortBy="0"
+>
+  <h1
+    class="page-title text-break"
+  >
+    Team Details for 1.1.c-demo2
+  </h1><tm-loading-retry>
+    <div
+      class="section"
+    >
+      <div
+        class="card"
+      >
+        <div
+          class="card-body fill-plain"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="col-3 text-end"
+            >
+              <label>
+                Course ID:
+              </label>
+            </div>
+            <div
+              class="col-9"
+            >
+              <span
+                id="course-id"
+              >
+                1.1.c-demo2
+              </span>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-3 text-end"
+            >
+              <label>
+                Course name:
+              </label>
+            </div>
+            <div
+              class="col-9"
+            >
+              <span
+                id="course-name"
+              >
+                Sample Course 101
+              </span>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-3 text-end"
+            >
+              <label>
+                Course institute:
+              </label>
+            </div>
+            <div
+              class="col-9"
+            >
+              <span
+                id="course-institute"
+              >
+                Test Institute
+              </span>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-3 text-end"
+            >
+              <label>
+                Instructors:
+              </label>
+            </div>
+            <div
+              class="col-9"
+              id="instructors"
+              style="margin-bottom: .5rem;"
+            >
+              <div>
+                 Instructor: 
+                <a
+                  href="mailto:1@1.com"
+                >
+                  1 (1@1.com)
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-3 text-end"
+            >
+              <label>
+                Your section:
+              </label>
+            </div>
+            <div
+              class="col-9"
+            >
+              <span
+                id="student-section"
+              >
+                Tutorial Group 2
+              </span>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-3 text-end"
+            >
+              <label>
+                Your team:
+              </label>
+            </div>
+            <div
+              class="col-9"
+            >
+              <span
+                id="student-team"
+              >
+                Team 2
+              </span>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-3 text-end"
+            >
+              <label>
+                Your name:
+              </label>
+            </div>
+            <div
+              class="col-9"
+            >
+              <span
+                id="student-name"
+              >
+                1
+              </span>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="col-3 text-end"
+            >
+              <label>
+                Your email:
+              </label>
+            </div>
+            <div
+              class="col-9"
+            >
+              <span
+                id="student-email"
+              >
+                1@1.com
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="card bg-light mb-4"
+    >
+      <div
+        class="card-body"
+      >
+        <span
+          class="d-inline h5 fw-bold"
+        >
+          Sort By: 
+        </span>
+        <div
+          class="btn-group"
+          data-toggle="buttons"
+        >
+          <button
+            class="btn btn-light"
+            id="sort-name"
+          >
+            Name
+          </button>
+          <button
+            class="btn btn-light"
+          >
+            Email
+          </button>
+        </div>
+      </div>
+    </div>
+  </tm-loading-retry><div
+    class="section"
+  >
+    <div
+      class="row top-padded"
+    >
+      <div
+        class="col-md-2"
+      >
+        <strong>
+          Your teammates:
+        </strong>
+      </div>
+      <div
+        class="col-md-10"
+      >
+        <table>
+          <tbody>
+            <tr>
+              <td
+                class="team-member-profile-cell"
+                id="teammates-details-0"
+              >
+                <div>
+                  <label>
+                    Name:
+                  </label>
+                   2 
+                </div>
+                <div>
+                  <label>
+                    Email:
+                  </label>
+                  <a
+                    href="mailto:iam2@hello.com"
+                  >
+                    iam2@hello.com
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</tm-student-course-details-page>
+`;

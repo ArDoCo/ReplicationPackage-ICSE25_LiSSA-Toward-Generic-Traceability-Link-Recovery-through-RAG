@@ -1,0 +1,3 @@
+Flight Manager
+
+Provides basic flight related capabilities for UAVs.

@@ -1,0 +1,41 @@
+.sortable-header {
+  cursor: pointer;
+
+  i {
+    margin-left: .3em;
+  }
+
+  .fa-stack {
+    width: 20%;
+  }
+
+  button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    font: inherit;
+    cursor: inherit;
+  }
+}
+
+.color-neutral {
+  color: gray;
+}
+
+.actions-cell,
+.actions-cell-narrow {
+  min-width: 160px;
+}
+
+@media (min-width: 1000px) {
+  .actions-cell {
+    min-width: 300px;
+  }
+
+  .actions-cell-narrow {
+    min-width: 160px;
+  }
+}

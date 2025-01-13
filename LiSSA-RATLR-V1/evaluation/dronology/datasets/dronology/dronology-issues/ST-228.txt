@@ -1,0 +1,3 @@
+Select route from the list to inspect
+
+When a route is clicked from the list  change its background on the list to indicate that it is selected  and then load its waypoints into the map and the table. 

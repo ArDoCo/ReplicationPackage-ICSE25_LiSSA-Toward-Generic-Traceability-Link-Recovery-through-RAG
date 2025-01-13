@@ -1,0 +1,3 @@
+Differentiate past and future flight path/route
+
+In the map  the past flight path that the UAV has already covered (behind the UAV) is shown in dotted lines. The flight route that the UAV is going to cover is shown in regular lines.

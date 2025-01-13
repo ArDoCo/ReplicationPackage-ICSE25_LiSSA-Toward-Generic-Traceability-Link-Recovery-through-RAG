@@ -1,0 +1,608 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InstructorCourseDetailsPageComponent should snap when students are still loading 1`] = `
+<tm-instructor-course-details-page
+  __ngContext__={[Function Number]}
+  courseDetails={[Function Object]}
+  courseService={[Function CourseService]}
+  hasLoadingStudentsFailed="false"
+  instructorService={[Function InstructorService]}
+  instructors={[Function Array]}
+  isDeleting="false"
+  isLoadingCsv="false"
+  isStudentsLoading={[Function Boolean]}
+  ngbModal={[Function NgbModal]}
+  progressBarService={[Function ProgressBarService]}
+  route={[Function ActivatedRoute]}
+  sectionsLoaded="0"
+  simpleModalService={[Function SimpleModalService]}
+  statusMessageService={[Function StatusMessageService]}
+  studentService={[Function StudentService]}
+  studentSortBy="0"
+  studentSortOrder={[Function Number]}
+  students={[Function Array]}
+  tableComparatorService={[Function TableComparatorService]}
+>
+  <tm-loading-retry>
+    <tm-loading-spinner>
+      <div
+        class="loading-container"
+      >
+        <div
+          class="row spinner-border text-primary"
+          role="status"
+        />
+        <div
+          class="row text-secondary"
+        >
+          Loading...
+        </div>
+      </div>
+    </tm-loading-spinner>
+  </tm-loading-retry>
+</tm-instructor-course-details-page>
+`;
+
+exports[`InstructorCourseDetailsPageComponent should snap with a course with one co-owner and no students, and populated course student list 1`] = `
+<tm-instructor-course-details-page
+  __ngContext__={[Function Number]}
+  courseDetails={[Function Object]}
+  courseService={[Function CourseService]}
+  hasLoadingStudentsFailed="false"
+  instructorService={[Function InstructorService]}
+  instructors={[Function Array]}
+  isDeleting="false"
+  isLoadingCsv="false"
+  isStudentsLoading="false"
+  ngbModal={[Function NgbModal]}
+  progressBarService={[Function ProgressBarService]}
+  route={[Function ActivatedRoute]}
+  sectionsLoaded="0"
+  simpleModalService={[Function SimpleModalService]}
+  statusMessageService={[Function StatusMessageService]}
+  studentService={[Function StudentService]}
+  studentSortBy="0"
+  studentSortOrder={[Function Number]}
+  students={[Function Array]}
+  tableComparatorService={[Function TableComparatorService]}
+>
+  <tm-loading-retry>
+    <div>
+      <h1>
+        Course Details
+      </h1>
+      <div
+        class="card"
+      >
+        <div
+          class="card-body fill-plain"
+        >
+          <div
+            class="row"
+          >
+            <label
+              class="col-sm-2 text-sm-end"
+            >
+              Course ID:
+            </label>
+            <span
+              class="col-sm-9 text-sm-start"
+              id="course-id"
+            >
+               CS101 
+            </span>
+          </div>
+          <div
+            class="row"
+          >
+            <label
+              class="col-sm-2 text-sm-end"
+            >
+              Course name:
+            </label>
+            <span
+              class="col-sm-9 text-sm-start"
+              id="course-name"
+            >
+               Introduction to CS 
+            </span>
+          </div>
+          <div
+            class="row"
+          >
+            <label
+              class="col-sm-2 text-sm-end"
+            >
+              Course institute:
+            </label>
+            <span
+              class="col-sm-9 text-sm-start"
+              id="course-institute"
+            >
+               Test Institute 
+            </span>
+          </div>
+          <div
+            class="row"
+          >
+            <label
+              class="col-sm-2 text-sm-end"
+            >
+              Sections:
+            </label>
+            <span
+              class="col-sm-9 text-sm-start"
+              id="num-sections"
+            >
+               0 
+            </span>
+          </div>
+          <div
+            class="row"
+          >
+            <label
+              class="col-sm-2 text-sm-end"
+            >
+              Teams:
+            </label>
+            <span
+              class="col-sm-9 text-sm-start"
+              id="num-teams"
+            >
+               0 
+            </span>
+          </div>
+          <div
+            class="row"
+          >
+            <label
+              class="col-sm-2 text-sm-end"
+            >
+              Total students:
+            </label>
+            <span
+              class="col-sm-9 text-sm-start"
+              id="num-students"
+            >
+               0 
+            </span>
+          </div>
+          <div
+            class="row"
+          >
+            <label
+              class="col-sm-2 text-sm-end control-label"
+            >
+              Instructors:
+            </label>
+            <div
+              class="col-sm-9 text-sm-start"
+              id="instructors"
+            >
+              <div>
+                 Co-owner: Hodor (hodor@gmail.com) 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="alert alert-warning"
+      >
+        <i
+          class="fa fa-exclamation-circle text-muted"
+        />
+         There are no students in this course. Click 
+        <a
+          href="/web/instructor/courses/enroll?courseid=CS101"
+          tmrouterlink="/web/instructor/courses/enroll"
+        >
+          here
+        </a>
+         to enroll students. 
+      </div>
+    </div>
+  </tm-loading-retry>
+</tm-instructor-course-details-page>
+`;
+
+exports[`InstructorCourseDetailsPageComponent should snap with a course with one co-owner and one student, and ajax failure 1`] = `
+<tm-instructor-course-details-page
+  __ngContext__={[Function Number]}
+  courseDetails={[Function Object]}
+  courseService={[Function CourseService]}
+  hasLoadingStudentsFailed="false"
+  instructorService={[Function InstructorService]}
+  instructors={[Function Array]}
+  isDeleting="false"
+  isLoadingCsv="false"
+  isStudentsLoading="false"
+  ngbModal={[Function NgbModal]}
+  progressBarService={[Function ProgressBarService]}
+  route={[Function ActivatedRoute]}
+  sectionsLoaded="0"
+  simpleModalService={[Function SimpleModalService]}
+  statusMessageService={[Function StatusMessageService]}
+  studentService={[Function StudentService]}
+  studentSortBy="0"
+  studentSortOrder={[Function Number]}
+  students={[Function Array]}
+  tableComparatorService={[Function TableComparatorService]}
+>
+  <tm-loading-retry>
+    <div>
+      <h1>
+        Course Details
+      </h1>
+      <div
+        class="card"
+      >
+        <div
+          class="card-body fill-plain"
+        >
+          <div
+            class="row"
+          >
+            <label
+              class="col-sm-2 text-sm-end"
+            >
+              Course ID:
+            </label>
+            <span
+              class="col-sm-9 text-sm-start"
+              id="course-id"
+            >
+               CS101 
+            </span>
+          </div>
+          <div
+            class="row"
+          >
+            <label
+              class="col-sm-2 text-sm-end"
+            >
+              Course name:
+            </label>
+            <span
+              class="col-sm-9 text-sm-start"
+              id="course-name"
+            >
+               Introduction to CS 
+            </span>
+          </div>
+          <div
+            class="row"
+          >
+            <label
+              class="col-sm-2 text-sm-end"
+            >
+              Course institute:
+            </label>
+            <span
+              class="col-sm-9 text-sm-start"
+              id="course-institute"
+            >
+               Test Institute 
+            </span>
+          </div>
+          <div
+            class="row"
+          >
+            <label
+              class="col-sm-2 text-sm-end"
+            >
+              Sections:
+            </label>
+            <span
+              class="col-sm-9 text-sm-start"
+              id="num-sections"
+            >
+               1 
+            </span>
+          </div>
+          <div
+            class="row"
+          >
+            <label
+              class="col-sm-2 text-sm-end"
+            >
+              Teams:
+            </label>
+            <span
+              class="col-sm-9 text-sm-start"
+              id="num-teams"
+            >
+               1 
+            </span>
+          </div>
+          <div
+            class="row"
+          >
+            <label
+              class="col-sm-2 text-sm-end"
+            >
+              Total students:
+            </label>
+            <span
+              class="col-sm-9 text-sm-start"
+              id="num-students"
+            >
+               1 
+            </span>
+          </div>
+          <div
+            class="row"
+          >
+            <label
+              class="col-sm-2 text-sm-end control-label"
+            >
+              Instructors:
+            </label>
+            <div
+              class="col-sm-9 text-sm-start"
+              id="instructors"
+            >
+              <div>
+                 Co-owner: Bran (bran@gmail.com) 
+              </div>
+            </div>
+          </div>
+          <div
+            style="margin-top: 10px;"
+          >
+            <div
+              class="text-center"
+            >
+              <button
+                class="btn btn-primary"
+                id="btn-remind-all"
+                type="button"
+                value="Remind Students to Join"
+              >
+                <i
+                  class="fa fa-envelope"
+                />
+                 Remind Students to Join 
+              </button>
+              <button
+                class="btn btn-primary btn-margin-left"
+                id="btn-download"
+                type="button"
+              >
+                <i
+                  class="fa fa-download"
+                />
+                 Download Student List 
+              </button>
+              <button
+                class="btn btn-danger btn-margin-left"
+                id="btn-delete-all"
+                type="button"
+                value="Delete All Students"
+              >
+                <i
+                  class="fa fa-trash"
+                />
+                 Delete All Students 
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="card-body p-0 student-table-margin card border"
+        id="student-list"
+      >
+        <tm-student-list>
+          <div
+            class="table-responsive"
+          >
+            <table
+              class="table table-bordered table-striped m-0"
+            >
+              <thead
+                class="thead-gray"
+              >
+                <tr>
+                  <th
+                    aria-sort="none"
+                    class="sortable-header"
+                  >
+                    <button>
+                       Section 
+                      <span
+                        aria-hidden="true"
+                        class="fa-stack"
+                      >
+                        <i
+                          class="fas fa-sort"
+                        />
+                      </span>
+                    </button>
+                  </th>
+                  <th
+                    aria-sort="none"
+                    class="sortable-header"
+                  >
+                    <button>
+                       Team 
+                      <span
+                        aria-hidden="true"
+                        class="fa-stack"
+                      >
+                        <i
+                          class="fas fa-sort"
+                        />
+                      </span>
+                    </button>
+                  </th>
+                  <th
+                    aria-sort="none"
+                    class="sort-by-name sortable-header"
+                  >
+                    <button>
+                       Student Name 
+                      <span
+                        aria-hidden="true"
+                        class="fa-stack"
+                      >
+                        <i
+                          class="fas fa-sort"
+                        />
+                      </span>
+                    </button>
+                  </th>
+                  <th
+                    aria-sort="none"
+                    class="sort-by-status sortable-header"
+                  >
+                    <button>
+                       Status 
+                      <span
+                        aria-hidden="true"
+                        class="fa-stack"
+                      >
+                        <i
+                          class="fas fa-sort"
+                        />
+                      </span>
+                    </button>
+                  </th>
+                  <th
+                    aria-sort="none"
+                    class="sortable-header"
+                  >
+                    <button>
+                       Email 
+                      <span
+                        aria-hidden="true"
+                        class="fa-stack"
+                      >
+                        <i
+                          class="fas fa-sort"
+                        />
+                      </span>
+                    </button>
+                  </th>
+                  <th
+                    class="align-center"
+                  >
+                    Action(s)
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  s=""
+                >
+                  <td>
+                    Tutorial Group 1
+                  </td>
+                  <td>
+                    Team 1
+                  </td>
+                  <td>
+                    Jamie
+                  </td>
+                  <td>
+                    Yet to Join
+                  </td>
+                  <td>
+                    jamie@gmail.com
+                  </td>
+                  <td
+                    class="no-print align-center"
+                  >
+                    <a
+                      class="btn btn-light btn-sm btn-margin-right"
+                      href="/web/instructor/courses/student/details?courseid=CS101&studentemail=jamie@gmail.com"
+                      id="btn-view-details-CS101-0"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                       View
+                    </a>
+                    <a
+                      class="btn btn-light btn-sm btn-margin-right"
+                      href="/web/instructor/courses/student/edit?courseid=CS101&studentemail=jamie@gmail.com"
+                      id="btn-edit-details-CS101-0"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                       Edit
+                    </a>
+                    <button
+                      class="btn btn-light btn-sm btn-margin-right"
+                      id="btn-send-invite-CS101-0"
+                    >
+                      Send Invite
+                    </button>
+                    <button
+                      class="btn btn-light btn-sm btn-margin-right"
+                      id="btn-delete-CS101-0"
+                    >
+                      Delete
+                    </button>
+                    <a
+                      class="btn btn-light btn-sm btn-margin-right"
+                      href="/web/instructor/students/records?courseid=CS101&studentemail=jamie@gmail.com"
+                      id="btn-view-records-CS101-0"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                       All Records
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </tm-student-list>
+      </div>
+    </div>
+  </tm-loading-retry>
+</tm-instructor-course-details-page>
+`;
+
+exports[`InstructorCourseDetailsPageComponent should snap with default fields 1`] = `
+<tm-instructor-course-details-page
+  __ngContext__={[Function Number]}
+  courseDetails={[Function Object]}
+  courseService={[Function CourseService]}
+  hasLoadingStudentsFailed="false"
+  instructorService={[Function InstructorService]}
+  instructors={[Function Array]}
+  isDeleting="false"
+  isLoadingCsv="false"
+  isStudentsLoading={[Function Boolean]}
+  ngbModal={[Function NgbModal]}
+  progressBarService={[Function ProgressBarService]}
+  route={[Function ActivatedRoute]}
+  sectionsLoaded="0"
+  simpleModalService={[Function SimpleModalService]}
+  statusMessageService={[Function StatusMessageService]}
+  studentService={[Function StudentService]}
+  studentSortBy="0"
+  studentSortOrder={[Function Number]}
+  students={[Function Array]}
+  tableComparatorService={[Function TableComparatorService]}
+>
+  <tm-loading-retry>
+    <tm-loading-spinner>
+      <div
+        class="loading-container"
+      >
+        <div
+          class="row spinner-border text-primary"
+          role="status"
+        />
+        <div
+          class="row text-secondary"
+        >
+          Loading...
+        </div>
+      </div>
+    </tm-loading-spinner>
+  </tm-loading-retry>
+</tm-instructor-course-details-page>
+`;

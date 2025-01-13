@@ -1,0 +1,47 @@
+.instr-help-qn-first {
+  padding-top: 5px;
+}
+
+.instr-help-qn-last {
+  padding-bottom: 5px;
+}
+
+button {
+  text-align: left;
+}
+
+.ui-text {
+  font-weight: bold;
+  color: #908B8B;
+  background-color: #E6E9E9;
+  font-size: 13px;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.section-header {
+  .fa-anchor {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .fa-anchor {
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &:hover {
+      .fa-anchor {
+        display: block;
+        opacity: 30%;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 100%;
+        }
+      }
+    }
+  }
+}

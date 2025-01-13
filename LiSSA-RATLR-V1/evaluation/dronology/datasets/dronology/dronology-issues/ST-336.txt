@@ -1,0 +1,3 @@
+Assign routes -- select
+
+"Implement the select route behavior. Ignore the notes on the mockup file  but use this:    Selecting a route on the left-hand side of the list will automatically select the matching route on the right-hand side and show the route on the map.     Selecting a route on the right-hand side will NOT auto-select any route on the left-hand side."

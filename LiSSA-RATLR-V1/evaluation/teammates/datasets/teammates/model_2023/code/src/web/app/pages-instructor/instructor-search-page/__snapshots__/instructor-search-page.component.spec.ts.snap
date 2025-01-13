@@ -1,0 +1,552 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InstructorSearchPageComponent should snap with a search key 1`] = `
+<tm-instructor-search-page
+  __ngContext__={[Function Number]}
+  courseService={[Function CourseService]}
+  instructorService={[Function InstructorService]}
+  isSearching="false"
+  searchParams={[Function Object]}
+  searchService={[Function SearchService]}
+  searchString=""
+  statusMessageService={[Function StatusMessageService]}
+  studentsListRowTables={[Function Array]}
+>
+  <tm-instructor-search-bar>
+    <div
+      class="card bg-light mb-4"
+    >
+      <div
+        class="card-body"
+      >
+        <div
+          class="text-muted"
+        >
+           You can search for students (by section name, team name, student name, or email) from all your courses here. 
+        </div>
+        <div
+          class="text-muted"
+        >
+           Search Tips:
+          <br />
+          <ul>
+            <li>
+              Put more keywords to search for more precise results.
+            </li>
+            <li>
+              Put quotation marks around words 
+              <b>
+                "[any word]"
+              </b>
+               to search for an exact phrase in an exact order. e.g. "John Doe".
+            </li>
+          </ul>
+        </div>
+        <div
+          class="form-group"
+        >
+          <div
+            class="input-group"
+          >
+            <input
+              class="form-control ng-untouched ng-pristine ng-valid"
+              id="search-keyword"
+              placeholder="Your search keyword"
+              type="text"
+            />
+            <button
+              class="btn btn-primary input-group-text"
+              id="btn-search"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </tm-instructor-search-bar><div>
+  </div>
+</tm-instructor-search-page>
+`;
+
+exports[`InstructorSearchPageComponent should snap with a student table 1`] = `
+<tm-instructor-search-page
+  __ngContext__={[Function Number]}
+  courseService={[Function CourseService]}
+  instructorService={[Function InstructorService]}
+  isSearching="false"
+  searchParams={[Function Object]}
+  searchService={[Function SearchService]}
+  searchString=""
+  statusMessageService={[Function StatusMessageService]}
+  studentsListRowTables={[Function Array]}
+>
+  <tm-instructor-search-bar>
+    <div
+      class="card bg-light mb-4"
+    >
+      <div
+        class="card-body"
+      >
+        <div
+          class="text-muted"
+        >
+           You can search for students (by section name, team name, student name, or email) from all your courses here. 
+        </div>
+        <div
+          class="text-muted"
+        >
+           Search Tips:
+          <br />
+          <ul>
+            <li>
+              Put more keywords to search for more precise results.
+            </li>
+            <li>
+              Put quotation marks around words 
+              <b>
+                "[any word]"
+              </b>
+               to search for an exact phrase in an exact order. e.g. "John Doe".
+            </li>
+          </ul>
+        </div>
+        <div
+          class="form-group"
+        >
+          <div
+            class="input-group"
+          >
+            <input
+              class="form-control ng-untouched ng-pristine ng-valid"
+              id="search-keyword"
+              placeholder="Your search keyword"
+              type="text"
+            />
+            <button
+              class="btn btn-primary input-group-text"
+              disabled=""
+              id="btn-search"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </tm-instructor-search-bar><div>
+    <tm-student-result-table>
+      <div
+        class="card border border-light-blue mb-3 student-course-table"
+      >
+        <div
+          class="card-header alert alert-primary alert-no-bottom fw-bold text-break"
+        >
+          [test-exa.demo]
+        </div>
+        <div
+          class="card-body p-0"
+        >
+          <tm-student-list>
+            <div
+              class="table-responsive"
+            >
+              <table
+                class="table table-bordered table-striped m-0"
+              >
+                <thead
+                  class="thead-gray"
+                >
+                  <tr>
+                    <th
+                      aria-sort="none"
+                      class="sortable-header"
+                    >
+                      <button>
+                         Section 
+                        <span
+                          aria-hidden="true"
+                          class="fa-stack"
+                        >
+                          <i
+                            class="fas fa-sort"
+                          />
+                        </span>
+                      </button>
+                    </th>
+                    <th
+                      aria-sort="none"
+                      class="sortable-header"
+                    >
+                      <button>
+                         Team 
+                        <span
+                          aria-hidden="true"
+                          class="fa-stack"
+                        >
+                          <i
+                            class="fas fa-sort"
+                          />
+                        </span>
+                      </button>
+                    </th>
+                    <th
+                      aria-sort="none"
+                      class="sort-by-name sortable-header"
+                    >
+                      <button>
+                         Student Name 
+                        <span
+                          aria-hidden="true"
+                          class="fa-stack"
+                        >
+                          <i
+                            class="fas fa-sort"
+                          />
+                        </span>
+                      </button>
+                    </th>
+                    <th
+                      aria-sort="none"
+                      class="sort-by-status sortable-header"
+                    >
+                      <button>
+                         Status 
+                        <span
+                          aria-hidden="true"
+                          class="fa-stack"
+                        >
+                          <i
+                            class="fas fa-sort"
+                          />
+                        </span>
+                      </button>
+                    </th>
+                    <th
+                      aria-sort="none"
+                      class="sortable-header"
+                    >
+                      <button>
+                         Email 
+                        <span
+                          aria-hidden="true"
+                          class="fa-stack"
+                        >
+                          <i
+                            class="fas fa-sort"
+                          />
+                        </span>
+                      </button>
+                    </th>
+                    <th
+                      class="align-center"
+                    >
+                      Action(s)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    s=""
+                  >
+                    <td>
+                      Tutorial Group 1
+                    </td>
+                    <td>
+                      Team 1
+                    </td>
+                    <td>
+                      tester
+                    </td>
+                    <td>
+                      Joined
+                    </td>
+                    <td>
+                      tester@tester.com
+                    </td>
+                    <td
+                      class="no-print align-center"
+                    >
+                      <a
+                        class="btn btn-light btn-sm btn-margin-right"
+                        href="/web/instructor/courses/student/details?courseid=test-exa.demo&studentemail=tester@tester.com"
+                        id="btn-view-details-test-exa.demo-0"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                         View
+                      </a>
+                      <a
+                        class="btn btn-light btn-sm btn-margin-right"
+                        href="/web/instructor/courses/student/edit?courseid=test-exa.demo&studentemail=tester@tester.com"
+                        id="btn-edit-details-test-exa.demo-0"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                         Edit
+                      </a>
+                      <button
+                        class="btn btn-light btn-sm btn-margin-right"
+                        id="btn-delete-test-exa.demo-0"
+                      >
+                        Delete
+                      </button>
+                      <a
+                        class="btn btn-light btn-sm btn-margin-right"
+                        href="/web/instructor/students/records?courseid=test-exa.demo&studentemail=tester@tester.com"
+                        id="btn-view-records-test-exa.demo-0"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                         All Records
+                      </a>
+                    </td>
+                  </tr>
+                  <tr
+                    s=""
+                  >
+                    <td>
+                      Tutorial Group 1
+                    </td>
+                    <td>
+                      Team 1
+                    </td>
+                    <td>
+                      Benny Charles
+                    </td>
+                    <td>
+                      Joined
+                    </td>
+                    <td>
+                      benny.c.tmms@gmail.tmt
+                    </td>
+                    <td
+                      class="no-print align-center"
+                    >
+                      <a
+                        class="btn btn-light btn-sm btn-margin-right"
+                        href="/web/instructor/courses/student/details?courseid=test-exa.demo&studentemail=benny.c.tmms@gmail.tmt"
+                        id="btn-view-details-test-exa.demo-1"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                         View
+                      </a>
+                      <a
+                        class="btn btn-light btn-sm btn-margin-right"
+                        href="/web/instructor/courses/student/edit?courseid=test-exa.demo&studentemail=benny.c.tmms@gmail.tmt"
+                        id="btn-edit-details-test-exa.demo-1"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                         Edit
+                      </a>
+                      <button
+                        class="btn btn-light btn-sm btn-margin-right"
+                        id="btn-delete-test-exa.demo-1"
+                      >
+                        Delete
+                      </button>
+                      <a
+                        class="btn btn-light btn-sm btn-margin-right"
+                        href="/web/instructor/students/records?courseid=test-exa.demo&studentemail=benny.c.tmms@gmail.tmt"
+                        id="btn-view-records-test-exa.demo-1"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                         All Records
+                      </a>
+                    </td>
+                  </tr>
+                  <tr
+                    s=""
+                  >
+                    <td>
+                      Tutorial Group 1
+                    </td>
+                    <td>
+                      Team 1
+                    </td>
+                    <td>
+                      Alice Betsy
+                    </td>
+                    <td>
+                      Joined
+                    </td>
+                    <td>
+                      alice.b.tmms@gmail.tmt
+                    </td>
+                    <td
+                      class="no-print align-center"
+                    >
+                      <a
+                        class="btn btn-light btn-sm btn-margin-right"
+                        href="/web/instructor/courses/student/details?courseid=test-exa.demo&studentemail=alice.b.tmms@gmail.tmt"
+                        id="btn-view-details-test-exa.demo-2"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                         View
+                      </a>
+                      <a
+                        class="btn btn-light btn-sm btn-margin-right"
+                        href="/web/instructor/courses/student/edit?courseid=test-exa.demo&studentemail=alice.b.tmms@gmail.tmt"
+                        id="btn-edit-details-test-exa.demo-2"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                         Edit
+                      </a>
+                      <button
+                        class="btn btn-light btn-sm btn-margin-right"
+                        id="btn-delete-test-exa.demo-2"
+                      >
+                        Delete
+                      </button>
+                      <a
+                        class="btn btn-light btn-sm btn-margin-right"
+                        href="/web/instructor/students/records?courseid=test-exa.demo&studentemail=alice.b.tmms@gmail.tmt"
+                        id="btn-view-records-test-exa.demo-2"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                         All Records
+                      </a>
+                    </td>
+                  </tr>
+                  <tr
+                    s=""
+                  >
+                    <td>
+                      Tutorial Group 1
+                    </td>
+                    <td>
+                      Team 1
+                    </td>
+                    <td>
+                      Danny Engrid
+                    </td>
+                    <td>
+                      Joined
+                    </td>
+                    <td>
+                      danny.e.tmms@gmail.tmt
+                    </td>
+                    <td
+                      class="no-print align-center"
+                    >
+                      <a
+                        class="btn btn-light btn-sm btn-margin-right"
+                        href="/web/instructor/courses/student/details?courseid=test-exa.demo&studentemail=danny.e.tmms@gmail.tmt"
+                        id="btn-view-details-test-exa.demo-3"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                         View
+                      </a>
+                      <a
+                        class="btn btn-light btn-sm btn-margin-right"
+                        href="/web/instructor/courses/student/edit?courseid=test-exa.demo&studentemail=danny.e.tmms@gmail.tmt"
+                        id="btn-edit-details-test-exa.demo-3"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                         Edit
+                      </a>
+                      <button
+                        class="btn btn-light btn-sm btn-margin-right"
+                        id="btn-delete-test-exa.demo-3"
+                      >
+                        Delete
+                      </button>
+                      <a
+                        class="btn btn-light btn-sm btn-margin-right"
+                        href="/web/instructor/students/records?courseid=test-exa.demo&studentemail=danny.e.tmms@gmail.tmt"
+                        id="btn-view-records-test-exa.demo-3"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                         All Records
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </tm-student-list>
+        </div>
+      </div>
+    </tm-student-result-table>
+  </div>
+</tm-instructor-search-page>
+`;
+
+exports[`InstructorSearchPageComponent should snap with default fields 1`] = `
+<tm-instructor-search-page
+  __ngContext__={[Function Number]}
+  courseService={[Function CourseService]}
+  instructorService={[Function InstructorService]}
+  isSearching="false"
+  searchParams={[Function Object]}
+  searchService={[Function SearchService]}
+  searchString=""
+  statusMessageService={[Function StatusMessageService]}
+  studentsListRowTables={[Function Array]}
+>
+  <tm-instructor-search-bar>
+    <div
+      class="card bg-light mb-4"
+    >
+      <div
+        class="card-body"
+      >
+        <div
+          class="text-muted"
+        >
+           You can search for students (by section name, team name, student name, or email) from all your courses here. 
+        </div>
+        <div
+          class="text-muted"
+        >
+           Search Tips:
+          <br />
+          <ul>
+            <li>
+              Put more keywords to search for more precise results.
+            </li>
+            <li>
+              Put quotation marks around words 
+              <b>
+                "[any word]"
+              </b>
+               to search for an exact phrase in an exact order. e.g. "John Doe".
+            </li>
+          </ul>
+        </div>
+        <div
+          class="form-group"
+        >
+          <div
+            class="input-group"
+          >
+            <input
+              class="form-control ng-untouched ng-pristine ng-valid"
+              id="search-keyword"
+              placeholder="Your search keyword"
+              type="text"
+            />
+            <button
+              class="btn btn-primary input-group-text"
+              disabled=""
+              id="btn-search"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </tm-instructor-search-bar><div>
+  </div>
+</tm-instructor-search-page>
+`;

@@ -1,0 +1,20 @@
+.footer-button {
+  background: none !important;
+  border: none;
+  float: right;
+  padding: 20px !important;
+  color: cornflowerblue;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.form-control {
+  &[readonly] {
+    background-color: transparent;
+  }
+
+  &:disabled {
+    background-color: #E9ECEF;
+  }
+}
