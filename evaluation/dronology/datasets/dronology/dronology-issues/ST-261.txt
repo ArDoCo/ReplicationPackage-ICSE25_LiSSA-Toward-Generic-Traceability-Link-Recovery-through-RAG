@@ -1,3 +1,0 @@
-Create move function 
-
-This function should take two wgs-84 position one for the current position and another for the target position and the number of meters to travel. it should return a new wgs-84 position that is the specified distance away.

@@ -1,2 +1,0 @@
-Load the default center coordinates from the configuration file
-

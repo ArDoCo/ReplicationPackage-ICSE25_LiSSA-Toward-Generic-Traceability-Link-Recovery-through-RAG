@@ -1,3 +1,0 @@
-Prevent user from assigning empty routes
-
-"When the user attempt to assign an empty route to a UAV (by trying to put an empty route from the right side panel to the left side)  prevent the route to be assigned and popup a notification saying ""There is no waypoint defined in [route name]. You cannot assign an empty route to a UAV."""

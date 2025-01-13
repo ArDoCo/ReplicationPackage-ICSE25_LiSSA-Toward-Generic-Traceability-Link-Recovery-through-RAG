@@ -1,3 +1,0 @@
-Following mode indicator
-
-"When the UI is following one or more UAVs  show a thick border around the map and a UI bar on top of the map (see the attached image). Clicking on ""Stop Following"" will perform the same functionality as ""Show all UAVs on the map"".    Refer to the FREditBar class for an implementation example."

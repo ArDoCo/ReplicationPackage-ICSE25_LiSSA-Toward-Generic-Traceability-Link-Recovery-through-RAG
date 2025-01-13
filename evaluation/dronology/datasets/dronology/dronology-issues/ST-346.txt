@@ -1,3 +1,0 @@
-Deleting a route
-
-"When the delete button in bar on top of the route map is clicked  popup a modal window saying ""Are you sure to delete the route [route name]?""  including two buttons: Yes and No. When clicked ""Yes""  remove the route in dronology  close the window  and update the UI. When clicked ""No""  simply close the window.    When in edit mode  the route can still be deleted. Remember to exit the edit mode before deleting the route."

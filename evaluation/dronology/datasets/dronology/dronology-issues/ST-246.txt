@@ -1,3 +1,0 @@
-Assign new route to a UAV
-
-"When ""Assign New Route"" button is clicked  show a *modal window* that occupies 90% of the screen. In the window  show the FRMainLayout and two buttons beneath the FRMainLayout: ""Cancel"" and ""Apply"".    Clicking ""Cancel""  the user will be sent back to the active flights view.    When no route is selected  the ""Apply"" button is disabled. Once a route is selected  enable the ""Apply"" button. Clicking the ""Apply"" button will popup another modal window (confirmation window) saying ""Are you sure you want [UAV name] to follow the route [route name]?"" Clicking ""Yes"" will assign the route to the UAV and close the modal windows. Clicking ""No""  the user will be sent back to the route planning *modal window*."

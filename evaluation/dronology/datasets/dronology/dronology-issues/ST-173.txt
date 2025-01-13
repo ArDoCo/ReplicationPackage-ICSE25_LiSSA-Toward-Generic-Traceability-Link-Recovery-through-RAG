@@ -1,3 +1,0 @@
-Add new waypoint to flight route
-
-"When a user clicks on the map  a new waypoint is created and shown on the map and in the list    If the newly added waypoint is not the first one a line is added between the new one and the previous one."

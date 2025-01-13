@@ -1,3 +1,0 @@
-Assign routes -- layout
-
-Create the assign routes layout based on the mockup file attached. Please read the callout notes on the mockup file.

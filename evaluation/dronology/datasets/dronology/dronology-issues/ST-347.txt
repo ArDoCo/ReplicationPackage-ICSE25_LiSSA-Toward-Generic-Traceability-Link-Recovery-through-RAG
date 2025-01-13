@@ -1,3 +1,0 @@
-Route list edit and delete buttons
-
-Implement the edit and delete functions for the buttons in the route list (see attached). They should behave the same (popup a window when deleting etc.) as the buttons in the route information bar.

@@ -1,3 +1,0 @@
-Internal Simulator
-
-The internal simulator provides low-fidelity features for supporting quick initial tests of a virtual UAV.  Features include takeoff  goto  land  and battery health.  

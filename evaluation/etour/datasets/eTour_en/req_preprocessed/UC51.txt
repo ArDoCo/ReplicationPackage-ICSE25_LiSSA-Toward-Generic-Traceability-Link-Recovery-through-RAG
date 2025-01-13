@@ -1,5 +1,0 @@
-Insert Preference Site
-Inserts a site selected in the list of bookmarks
-Activate the feature for the insertion of the selected site from the bookmarks
-Prompt the inclusion Confirm the input
-Inserts the selected site in the list of bookmarks

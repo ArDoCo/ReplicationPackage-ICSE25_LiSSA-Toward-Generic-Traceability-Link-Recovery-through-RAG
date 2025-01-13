@@ -1,3 +1,0 @@
-Object Avoidance
-
-Collision Avoidance API and general services

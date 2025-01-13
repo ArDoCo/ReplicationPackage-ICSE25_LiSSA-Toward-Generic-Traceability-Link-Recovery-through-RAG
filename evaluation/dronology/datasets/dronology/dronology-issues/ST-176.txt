@@ -1,3 +1,0 @@
-Insert waypoint into flight route
-
-By clicking on a line connecting 2 existing waypoints  a new waypoint is added in between these 2 waypoints

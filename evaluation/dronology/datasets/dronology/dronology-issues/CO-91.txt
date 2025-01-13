@@ -1,3 +1,0 @@
-GCS
-
-Python based system that manages and controls UAVs.  Communicates with Dronology via the Ground Station middleware. Each GCS is responsible for communicating directly with each UAV  sending it commands and monitoring its state including its current position  flight mode  and  health.

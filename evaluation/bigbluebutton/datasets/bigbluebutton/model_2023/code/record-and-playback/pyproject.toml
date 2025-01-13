@@ -1,3 +1,0 @@
-[tool.black]
-# Ubuntu 16.04 ships python 3.5; 18.04 has 3.6
-target-version = ["py35", "py36"]

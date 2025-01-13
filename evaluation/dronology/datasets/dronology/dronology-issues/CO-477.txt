@@ -1,3 +1,0 @@
-Single UAV Flight Plan Scheduler
-
-Single UAV flight plan assignments (taking an existing route  instantiating it  and assigning to a UAV)

@@ -1,3 +1,0 @@
-Edit mode
-
-"Use the enableRouteEditing() and disableRouteEditing() methods in the MapRouteUtility class.    When the edit button is clicked  the map and the table enter edit mode. A thicker border is shown around the map and table to indicate edit mode (see mockup). Two buttons are added on top of the map/table area: Save and Cancel.    In the edit mode  users can create new waypoints  move waypoints  remove waypoints  etc. When the edit mode is not activated  disable these editing functionalities.    Clicking the ""Save"" button will send the current waypoints data to dronology and exit the edit mode. Clicking the ""Cancel"" button will undo all changes (fetch the data from dronology again) and exit the edit mode.  "

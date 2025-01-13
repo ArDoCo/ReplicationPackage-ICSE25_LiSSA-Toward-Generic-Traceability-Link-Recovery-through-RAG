@@ -1,4 +1,0 @@
-View Convention History
-View the history of conventions derived from a selected point of rest
-Access the features on the display of historical conventions
-Upload data on conventions from the restaurant selected

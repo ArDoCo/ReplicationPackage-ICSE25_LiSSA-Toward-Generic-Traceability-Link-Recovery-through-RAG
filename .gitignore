@@ -1,7 +1,0 @@
-*.jar
-.ipynb_checkpoints
-.DS_Store
-/evaluation-caches*
-/caches*
-/cache
-

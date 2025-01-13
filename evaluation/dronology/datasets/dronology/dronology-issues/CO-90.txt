@@ -1,3 +1,0 @@
-GCS Middleware
-
-Handles connections between Dronology and Ground Control Stations (GCS). Forwards commands  monitoring  and other messages from Dronology to its registered GCS and passes messages describing the state of the UAVs managed by each GCS back to dronology.

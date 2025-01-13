@@ -1,2 +1,0 @@
-Load the default zoom level from the configuration file
-

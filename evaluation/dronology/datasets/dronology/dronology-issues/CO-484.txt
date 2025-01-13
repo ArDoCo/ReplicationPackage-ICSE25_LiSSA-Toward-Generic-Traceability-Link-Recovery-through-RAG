@@ -1,3 +1,0 @@
-Stop In Place
-
-Simple collision avoidance implementation that stops UAVs when they violate a minimum safety distance.

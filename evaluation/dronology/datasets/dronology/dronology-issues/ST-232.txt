@@ -1,3 +1,0 @@
-Make the UI refreshing rate configurable
-
-Currently  the UI refreshing rate to update drone info is hard-coded as once per 1000ms. Create a field in the configuration file and make it configurable.

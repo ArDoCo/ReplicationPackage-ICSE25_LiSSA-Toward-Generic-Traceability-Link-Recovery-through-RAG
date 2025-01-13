@@ -1,3 +1,0 @@
-Flight Patterns
-
-Provides capabilities for creating and executing complex flight patters for multiple UAVs

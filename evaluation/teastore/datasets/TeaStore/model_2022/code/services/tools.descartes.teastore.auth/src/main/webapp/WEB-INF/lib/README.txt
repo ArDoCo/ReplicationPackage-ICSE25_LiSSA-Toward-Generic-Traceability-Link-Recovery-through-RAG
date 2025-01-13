@@ -1,1 +1,0 @@
-Maven will copy dependencies into this folder, do not delete it.

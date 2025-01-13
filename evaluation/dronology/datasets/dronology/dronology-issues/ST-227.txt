@@ -1,3 +1,0 @@
-Remove waypoint from the table
-
-"Add a trashcan button to the right of each row in the table. Clicking on the button will pop-up a window showing ""Are you sure you want to delete this waypoint?"" and two buttons (Yes and No). When the user clicks on ""No""  window closes and nothing happens. When the user clicks on ""Yes""  remove the waypoint on that row from the table and remove that waypoint on the map  then close the window."

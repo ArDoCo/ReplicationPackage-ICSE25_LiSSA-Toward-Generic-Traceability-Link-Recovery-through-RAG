@@ -1,2 +1,0 @@
-Change the focused UAV icon and path color to blue to match the color in the list 
-

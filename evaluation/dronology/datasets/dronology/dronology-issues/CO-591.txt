@@ -1,3 +1,0 @@
-UAV Registration Manager
-
-Provides capabilities for registering UAVs  i.e.  providing meta-data regarding the UAV (such as payload  wingspan  equipment...)

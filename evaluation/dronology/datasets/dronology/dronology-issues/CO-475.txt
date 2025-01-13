@@ -1,3 +1,0 @@
-Flight Scheduling and Execution
-
-Provides capabilities for executing flights assigned to a UAV.

@@ -1,3 +1,0 @@
-UAV Activation Manager
-
-Provides capabilities for activating and deactivating both Virtual and Physical UAVs within Dronology.

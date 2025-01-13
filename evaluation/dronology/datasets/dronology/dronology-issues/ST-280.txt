@@ -1,3 +1,0 @@
-Automatic map scale when UI load
-
-When the UI is loaded  automatically move the map so that all registered UAVs and their planned routes (or rather the rectangle that bounds all UAVs and their planned routes) are visible in the center of the map; also  zoom the map so that all registered UAVs and their planned paths constitutes about 60% of the map.

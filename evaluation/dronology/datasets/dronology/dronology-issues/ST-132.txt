@@ -1,3 +1,0 @@
-Create an UI configuration singleton
-
-"Follow the example on https://gist.github.com/kimmellj/bd97790d66c5fd1408e0 and create a singleton class for all UI parameters. Search for Java Singleton for other singleton examples.    The current parameters include: project_name  map_center_lan  map_center_lon  and map_default_zoom.    In the future  we will use this class for configurable parameters."

@@ -1,3 +1,0 @@
-Add route meta info and control above the map
-
-"Add a CostomComponent above the map to show the following info of the selected route (see the mockup for the layout):  * the name of the route  * the number of waypoints it has  * an edit button to activate editing  * a delete button (do not do anything for now)  * a checkbox saying ""Table View"". When the checkbox is checked  show the table (grid) view below the map.    If no route is selected  show ""No route is selected"" in the name area and disable all controls."

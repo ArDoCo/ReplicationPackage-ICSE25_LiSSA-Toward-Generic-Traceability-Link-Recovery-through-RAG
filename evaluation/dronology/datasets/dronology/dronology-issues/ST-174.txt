@@ -1,3 +1,0 @@
-Remove Waypoint
-
-"A waypoint can be removed from the route.    If the waypoint is the last in the list of waypoints the previous waypoint becomes the final waypoint    If the waypoint is the first in the list of waypoints the next waypoint becomes the starting waypoint    If the waypoint is not the last in the list of waypoints the previous waypoint will be connected with the next waypoint.    "

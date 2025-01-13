@@ -1,3 +1,0 @@
-Activity Logger
-
-Provides capabilities for logging UAV related events (such as assigned flights  executed missions...).

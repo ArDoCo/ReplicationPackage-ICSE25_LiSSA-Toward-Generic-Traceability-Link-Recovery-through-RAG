@@ -1,3 +1,0 @@
-Clean up the waypoint grid
-
-"Hide the ""id"" and ""reached"" columns. Add a column called ""#""  which simply displays the order of the waypoint (1  2  3  ...).    "

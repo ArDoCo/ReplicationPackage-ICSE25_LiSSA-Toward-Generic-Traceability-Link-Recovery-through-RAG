@@ -1,3 +1,0 @@
-Replace existing Coordinate implementation with new LlaCoordinate
-
-"Replace existing Coordinate implementation with new LlaCoordinate    This requires:  * updating the flight simulator to work with double values instead of long  * UI adaptations to display coordinates correctly  * additional functionality to modify waypoints (LlaCoordinate is now immutable)"
