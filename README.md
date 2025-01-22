@@ -14,6 +14,14 @@ This is the replication package for our paper "LiSSA: Toward Generic Traceabilit
 
 Each of the directories contain a README that explains how to run the tool and reproduce the results.
 
+### Evaluation Results
+Our summarized evaluation results can be found in the excel sheets in the root directory of this repository. The excel sheets contain the results of the evaluation for the different datasets and configurations.
+
+* Evaluation-Req2Code.xlsx: Contains the results of the requirement to code evaluation.
+* Evaluation-Req2Code-Significance.xlsx: Contains the results of the requirement to code evaluation with significance tests.
+* Evaluation-SAD.xlsx: Contains the results of the software architecture documentation (SAD) evaluation. (SAD to Code, SAD to Software Architecture Model (SAM))
+* Evaluation-SAD-Significance.xlsx: Contains the results of the software architecture documentation (SAD) evaluation with significance tests.
+
 ## Installation (Docker)
 We suggest to use the provided docker container as it contain everything you need to run the tool. To run the container, execute `docker run -it --rm ghcr.io/ardoco/icse25`. The container will start in this directory.
 The docker container contains everything including the cache. Thus, you do not need access to OpenAI to run the evaluation.
@@ -34,6 +42,7 @@ Extract `cache.tgz` in the repository to get the caches at their desired locatio
 To reproduce the results of our evaluation, please follow the instructions in the README of the respective directories.
 
 a. `LiSSA-RATLR-V1` contains the code and datasets used to create the results without the significance tests.
+
 b. `LiSSA-RATLR-V2` contains the code and datasets used to create the runs used to perform significance tests.
 
 ## Reusing LiSSA
@@ -55,4 +64,3 @@ LiSSA contains multiple modules that can be used or extended:
 * `classifier`: Here, the prompts and LLMs are defined. Here, you can define new classifiers, change prompts, or change the LLMs.
 * `resultaggregator`: Aggregates the results of the classifier. This is used to get the traceability links on the right level of granularity.
 * `postprocessor`: Postprocesses the results of the classifier. Mostly used for changing the identifiers to match the format of the gold standards.
-*
