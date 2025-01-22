@@ -1,17 +1,12 @@
-# Replication Package for "LiSSA: Toward Generic Traceability Link Recovery through Retrieval-Augmented Generation"
-This is the replication package for our paper "LiSSA: Toward Generic Traceability Link Recovery through Retrieval-Augmented Generation". This package contains the source code for the LiSSA tool, the dataset used in the evaluation, and the results of the evaluation.
+# LiSSA RATLR V1
+This part of the replication package contains the code and datasets used to create the results without the significance tests. It represents a former version of the tool (i.e., without features like seed definition).
 
-## Requirements
-- Java JDK 21 + Maven 3
-- Open AI subscription: API Key
-
-## Structure of this Repository
+## Structure of this version of LiSSA
 * `lissa/` contains the source code of the LiSSA tool.
 * `evaluation/` contains the datasets used in the evaluation and the results of the evaluation.
 
-## Installation
-a. You can use the provided JAR.
-b. You can build the project using Maven using `cd lissa && mvn package` . The Jar will be created in the target folder in the lissa project (lissa/target/ratlr-*-jar-with-dependencies.jar).
+## Installation (Local only; In the Docker container, everything is already set up)
+You can build the project using Maven using `cd lissa && mvn package` . The Jar will be created in the target folder in the lissa project (lissa/target/ratlr-*-jar-with-dependencies.jar).
 
 ## Usage
 1. Select the dataset you want to use for evaluation and go to this directory. E.g., `cd evaluation/smos`
@@ -32,8 +27,8 @@ A result file like the one for SMOS with retrieval-only (evaluation/smos/results
 It contains the configuration and the results of the evaluation.
 
 
-## Configuration
 ```json
+## Configuration
 {
   "source_artifact_provider" : {
     "name" : "text",
@@ -89,7 +84,7 @@ It contains the configuration and the results of the evaluation.
     "args" : { }
   }
 }
-```
+
 ## Results
 * True Positives: 436
 * False Positives: 904
@@ -97,3 +92,4 @@ It contains the configuration and the results of the evaluation.
 * Precision: 0.3253731343283582
 * Recall: 0.41762452107279696
 * F1: 0.3657718120805369
+```
