@@ -1,4 +1,4 @@
-# LiSSA RATLR V1
+# LiSSA RATLR V2
 This part of the replication package contains the code and datasets used to create the results without the significance tests. It represents a former version of the tool (i.e., without features like seed definition).
 
 ## Structure of this version of LiSSA
