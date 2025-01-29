@@ -1,0 +1,116 @@
+Dataset successfully loaded. Rows: 8 Columns: 16 
+Data successfully split into baseline and Lissa approaches.
+Baseline group size: 2 
+Lissa group size: 6 
+Initialized result storage for Wilcoxon test and effect size calculations.
+Processing baseline approach: ArDoCode 
+ - Analyzing metric: BBB_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: BBB_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0345 
+ - Analyzing metric: BBB_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: MS_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: MS_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0305 
+ - Analyzing metric: MS_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: TS_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: TS_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.035 
+ - Analyzing metric: TS_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+Processing baseline approach: Sentence/None (No LLM) 
+ - Analyzing metric: BBB_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: BBB_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0345 
+ - Analyzing metric: BBB_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: MS_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: MS_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0305 
+ - Analyzing metric: MS_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: TS_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: TS_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.035 
+ - Analyzing metric: TS_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.438 
+ - Analyzing metric: Average_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+
+Calculating mean and standard deviation for LiSSA dataset...
+Mean and standard deviation calculated successfully.
+
+Wilcoxon p-values:
+                Approach  BBB_P  BBB_R BBB_F1   MS_P   MS_R  MS_F1   TS_P  TS_R  TS_F1 Average_P Average_R Average_F1 w_Average_P w_Average_R w_Average_F1
+1               ArDoCode 0.0313 0.0345 0.0313 0.0313 0.0305 0.0313 0.0313 0.035 0.0313    0.0313    0.0313     0.0313      0.0313      0.0313       0.0313
+2 Sentence/None (No LLM) 0.0313 0.0345 0.0313 0.0313 0.0305 0.0313 0.0313 0.035 0.4380    0.0313    0.0313     0.0313      0.0313      0.0313       0.0313
+
+Wilcoxon effect sizes:
+                Approach                      BBB_P                      BBB_R                     BBB_F1                       MS_P                       MS_R                      MS_F1                       TS_P                       TS_R                         TS_F1                  Average_P                  Average_R                 Average_F1                w_Average_P                w_Average_R               w_Average_F1
+1               ArDoCode 0.899 (large) [0.90, 0.92] 0.906 (large) [0.91, 0.95] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.927 (large) [0.92, 1.00] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.904 (large) [0.90, 0.95]    0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92]
+2 Sentence/None (No LLM) 0.899 (large) [0.90, 0.92] 0.906 (large) [0.91, 0.95] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.927 (large) [0.92, 1.00] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.904 (large) [0.90, 0.95] 0.385 (moderate) [0.04, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92]
+
+Mean and standard deviation values:
+              BBB_P             BBB_R            BBB_F1              MS_P              MS_R             MS_F1              TS_P              TS_R             TS_F1         Average_P         Average_R        Average_F1       w_Average_P       w_Average_R      w_Average_F1
+1 0.199 ± 0.001 [6] 0.213 ± 0.001 [6] 0.206 ± 0.001 [6] 0.059 ± 0.001 [6] 0.727 ± 0.010 [6] 0.110 ± 0.002 [6] 0.345 ± 0.004 [6] 0.332 ± 0.004 [6] 0.338 ± 0.004 [6] 0.201 ± 0.002 [6] 0.424 ± 0.004 [6] 0.218 ± 0.002 [6] 0.246 ± 0.002 [6] 0.267 ± 0.001 [6] 0.249 ± 0.002 [6]
+
+All results have been saved to CSV files successfully.

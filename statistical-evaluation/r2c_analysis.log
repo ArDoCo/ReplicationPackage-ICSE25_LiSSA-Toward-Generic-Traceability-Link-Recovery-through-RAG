@@ -1,0 +1,438 @@
+Datasets successfully loaded.
+Baseline dataset: Rows: 5 Columns: 29 
+LiSSA dataset: Rows: 6 Columns: 29 
+Initialized result storage for Wilcoxon test and effect size calculations.
+Processing baseline approach: VSM 
+ - Analyzing metric: SMOS_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: SMOS_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0355 
+ - Analyzing metric: SMOS_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: SMOS_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: eTour_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: eTour_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0335 
+ - Analyzing metric: eTour_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: eTour_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: iTrust_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0625 
+ - Analyzing metric: iTrust_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.035 
+ - Analyzing metric: iTrust_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: iTrust_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_DD2Code_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_DD2Code_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.035 
+ - Analyzing metric: Dronology_DD2Code_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_DD2Code_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0355 
+ - Analyzing metric: w_Average_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+Processing baseline approach: LSI 
+ - Analyzing metric: SMOS_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: SMOS_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0355 
+ - Analyzing metric: SMOS_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: SMOS_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: eTour_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: eTour_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0335 
+ - Analyzing metric: eTour_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: eTour_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: iTrust_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: iTrust_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.035 
+ - Analyzing metric: iTrust_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: iTrust_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_DD2Code_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_DD2Code_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.035 
+ - Analyzing metric: Dronology_DD2Code_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_DD2Code_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0355 
+ - Analyzing metric: w_Average_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+Processing baseline approach: Comet (Best, without Dronology) 
+ - Analyzing metric: SMOS_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: SMOS_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0355 
+ - Analyzing metric: SMOS_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0938 
+ - Analyzing metric: SMOS_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: eTour_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: eTour_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0335 
+ - Analyzing metric: eTour_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: eTour_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: iTrust_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: iTrust_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.035 
+ - Analyzing metric: iTrust_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.844 
+ - Analyzing metric: iTrust_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_P 
+   Skipping metric due to missing values.
+ - Analyzing metric: Dronology_RE2Code_R 
+   Skipping metric due to missing values.
+ - Analyzing metric: Dronology_RE2Code_F1 
+   Skipping metric due to missing values.
+ - Analyzing metric: Dronology_RE2Code_F2 
+   Skipping metric due to missing values.
+ - Analyzing metric: Dronology_DD2Code_P 
+   Skipping metric due to missing values.
+ - Analyzing metric: Dronology_DD2Code_R 
+   Skipping metric due to missing values.
+ - Analyzing metric: Dronology_DD2Code_F1 
+   Skipping metric due to missing values.
+ - Analyzing metric: Dronology_DD2Code_F2 
+   Skipping metric due to missing values.
+ - Analyzing metric: Average_P 
+   Skipping metric due to missing values.
+ - Analyzing metric: Average_R 
+   Skipping metric due to missing values.
+ - Analyzing metric: Average_F1 
+   Skipping metric due to missing values.
+ - Analyzing metric: Average_F2 
+   Skipping metric due to missing values.
+ - Analyzing metric: w_Average_P 
+   Skipping metric due to missing values.
+ - Analyzing metric: w_Average_R 
+   Skipping metric due to missing values.
+ - Analyzing metric: w_Average_F1 
+   Skipping metric due to missing values.
+ - Analyzing metric: w_Average_F2 
+   Skipping metric due to missing values.
+Processing baseline approach: FTLR (Best) 
+ - Analyzing metric: SMOS_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: SMOS_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0355 
+ - Analyzing metric: SMOS_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: SMOS_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: eTour_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: eTour_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0335 
+ - Analyzing metric: eTour_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: eTour_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: iTrust_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: iTrust_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.035 
+ - Analyzing metric: iTrust_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: iTrust_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_DD2Code_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_DD2Code_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.035 
+ - Analyzing metric: Dronology_DD2Code_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_DD2Code_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0355 
+ - Analyzing metric: w_Average_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+Processing baseline approach: FTLR (Opt) 
+ - Analyzing metric: SMOS_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: SMOS_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0355 
+ - Analyzing metric: SMOS_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: SMOS_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: eTour_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: eTour_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0335 
+ - Analyzing metric: eTour_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: eTour_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: iTrust_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: iTrust_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.035 
+ - Analyzing metric: iTrust_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: iTrust_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_RE2Code_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_DD2Code_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_DD2Code_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.035 
+ - Analyzing metric: Dronology_DD2Code_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Dronology_DD2Code_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: Average_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_P 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+ - Analyzing metric: w_Average_R 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0355 
+ - Analyzing metric: w_Average_F1 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.438 
+ - Analyzing metric: w_Average_F2 
+   Performing Wilcoxon signed-rank test...
+   Wilcoxon test completed. p-value: 0.0313 
+
+Calculating mean and standard deviation for LiSSA dataset...
+Mean and standard deviation calculated successfully.
+
+Wilcoxon p-values:
+                         Approach SMOS_P SMOS_R SMOS_F1 SMOS_F2 eTour_P eTour_R eTour_F1 eTour_F2 iTrust_P iTrust_R iTrust_F1 iTrust_F2 Dronology_RE2Code_P Dronology_RE2Code_R Dronology_RE2Code_F1 Dronology_RE2Code_F2 Dronology_DD2Code_P Dronology_DD2Code_R Dronology_DD2Code_F1 Dronology_DD2Code_F2 Average_P Average_R Average_F1 Average_F2 w_Average_P w_Average_R w_Average_F1 w_Average_F2
+1                             VSM 0.0313 0.0355  0.0313  0.0313  0.0313  0.0335   0.0313   0.0313   0.0625    0.035    0.0313    0.0313              0.0313              0.0313               0.0313               0.0313              0.0313               0.035               0.0313               0.0313    0.0313    0.0313     0.0313     0.0313      0.0313      0.0355       0.0313       0.0313
+2                             LSI 0.0313 0.0355  0.0313  0.0313  0.0313  0.0335   0.0313   0.0313   0.0313    0.035    0.0313    0.0313              0.0313              0.0313               0.0313               0.0313              0.0313               0.035               0.0313               0.0313    0.0313    0.0313     0.0313     0.0313      0.0313      0.0355       0.0313       0.0313
+3 Comet (Best, without Dronology) 0.0313 0.0355  0.0938  0.0313  0.0313  0.0335   0.0313   0.0313   0.0313    0.035    0.8440    0.0313                  NA                  NA                   NA                   NA                  NA                  NA                   NA                   NA        NA        NA         NA         NA          NA          NA           NA           NA
+4                     FTLR (Best) 0.0313 0.0355  0.0313  0.0313  0.0313  0.0335   0.0313   0.0313   0.0313    0.035    0.0313    0.0313              0.0313              0.0313               0.0313               0.0313              0.0313               0.035               0.0313               0.0313    0.0313    0.0313     0.0313     0.0313      0.0313      0.0355       0.0313       0.0313
+5                      FTLR (Opt) 0.0313 0.0355  0.0313  0.0313  0.0313  0.0335   0.0313   0.0313   0.0313    0.035    0.0313    0.0313              0.0313              0.0313               0.0313               0.0313              0.0313               0.035               0.0313               0.0313    0.0313    0.0313     0.0313     0.0313      0.0313      0.0355       0.4380       0.0313
+
+Wilcoxon effect sizes:
+                         Approach                     SMOS_P                     SMOS_R                    SMOS_F1                    SMOS_F2                    eTour_P                    eTour_R                   eTour_F1                   eTour_F2                   iTrust_P                   iTrust_R                  iTrust_F1                  iTrust_F2        Dronology_RE2Code_P        Dronology_RE2Code_R       Dronology_RE2Code_F1       Dronology_RE2Code_F2        Dronology_DD2Code_P        Dronology_DD2Code_R       Dronology_DD2Code_F1       Dronology_DD2Code_F2                  Average_P                  Average_R                 Average_F1                 Average_F2                w_Average_P                w_Average_R                  w_Average_F1               w_Average_F2
+1                             VSM 0.899 (large) [0.90, 0.92] 0.901 (large) [0.90, 0.95] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.911 (large) [0.91, 0.95] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.813 (large) [0.39, 0.92] 0.904 (large) [0.90, 0.95] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.904 (large) [0.90, 0.95] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.901 (large) [0.90, 0.93]    0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92]
+2                             LSI 0.899 (large) [0.90, 0.92] 0.901 (large) [0.90, 0.93] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.911 (large) [0.91, 0.95] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.904 (large) [0.90, 0.95] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.904 (large) [0.90, 0.95] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.901 (large) [0.90, 0.95]    0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92]
+3 Comet (Best, without Dronology) 0.899 (large) [0.90, 0.92] 0.901 (large) [0.90, 0.93] 0.728 (large) [0.13, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.911 (large) [0.91, 0.95] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.904 (large) [0.90, 0.95] 0.128 (small) [0.04, 0.91] 0.899 (large) [0.90, 0.92]                       <NA>                       <NA>                       <NA>                       <NA>                       <NA>                       <NA>                       <NA>                       <NA>                       <NA>                       <NA>                       <NA>                       <NA>                       <NA>                       <NA>                          <NA>                       <NA>
+4                     FTLR (Best) 0.899 (large) [0.90, 0.92] 0.901 (large) [0.90, 0.93] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.911 (large) [0.91, 0.95] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.904 (large) [0.90, 0.95] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.904 (large) [0.90, 0.95] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.901 (large) [0.90, 0.93]    0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92]
+5                      FTLR (Opt) 0.899 (large) [0.90, 0.92] 0.901 (large) [0.90, 0.93] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.911 (large) [0.91, 0.95] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.904 (large) [0.90, 0.95] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.904 (large) [0.90, 0.95] 0.899 (large) [0.90, 0.93] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.899 (large) [0.90, 0.92] 0.901 (large) [0.90, 0.93] 0.385 (moderate) [0.04, 0.91] 0.899 (large) [0.90, 0.92]
+
+Mean and standard deviation values:
+             SMOS_P            SMOS_R           SMOS_F1           SMOS_F2           eTour_P           eTour_R          eTour_F1          eTour_F2          iTrust_P          iTrust_R         iTrust_F1         iTrust_F2 Dronology_RE2Code_P Dronology_RE2Code_R Dronology_RE2Code_F1 Dronology_RE2Code_F2 Dronology_DD2Code_P Dronology_DD2Code_R Dronology_DD2Code_F1 Dronology_DD2Code_F2         Average_P         Average_R        Average_F1        Average_F2       w_Average_P       w_Average_R      w_Average_F1      w_Average_F2
+1 0.592 ± 0.007 [6] 0.189 ± 0.004 [6] 0.286 ± 0.005 [6] 0.219 ± 0.004 [6] 0.401 ± 0.006 [6] 0.729 ± 0.006 [6] 0.518 ± 0.006 [6] 0.627 ± 0.006 [6] 0.205 ± 0.004 [6] 0.456 ± 0.004 [6] 0.282 ± 0.004 [6] 0.366 ± 0.004 [6]   0.221 ± 0.004 [6]   0.334 ± 0.007 [6]    0.266 ± 0.005 [6]    0.303 ± 0.006 [6]   0.179 ± 0.002 [6]   0.381 ± 0.003 [6]    0.244 ± 0.002 [6]    0.311 ± 0.003 [6] 0.320 ± 0.002 [6] 0.418 ± 0.002 [6] 0.319 ± 0.002 [6] 0.365 ± 0.002 [6] 0.357 ± 0.003 [6] 0.347 ± 0.002 [6] 0.295 ± 0.002 [6] 0.315 ± 0.002 [6]
+
+All results have been saved to CSV files successfully.
