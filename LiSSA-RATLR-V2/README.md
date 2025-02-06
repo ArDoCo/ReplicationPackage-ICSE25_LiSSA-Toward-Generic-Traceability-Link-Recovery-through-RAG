@@ -13,9 +13,6 @@ This part of the replication package contains the code and datasets used to crea
 ## Installation (Local only; In the Docker container, everything is already set up)
 You can build the project using Maven using `cd lissa && mvn package` . The Jar will be created in the target folder in the lissa project (lissa/target/ratlr-*-jar-with-dependencies.jar).
 
-## Installation
-You can build the project using Maven using `cd lissa && mvn package` . The Jar will be created in the target folder in the lissa project (lissa/target/ratlr-*-jar-with-dependencies.jar).
-
 ## Usage
 1. Select the configuration you want to use for evaluation in `./lissa/configs`, e.g., `./lissa/configs/req2code-significance/SMOS_-102959883_artifact_artifact_reasoning_gpt_gpt-4o-2024-05-13.json`. You can also provide a directory containing multiple configurations.
 2. Configure your OpenAI API key and organization in a `.env` file. You can use the provided template file as a template [lissa/env-template](./lissa/env-template). You can set both to `dummy` if you just want to use the caches. (If you are using the docker container, this is already set up.)
