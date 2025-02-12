@@ -10,7 +10,7 @@ You can build the project using Maven using `cd lissa && mvn package` . The Jar 
 
 ## Usage
 1. Select the dataset you want to use for evaluation and go to this directory. E.g., `cd evaluation/smos`
-2. To run the evaluations just execute `bash evaluate.sh`
+2. To run the evaluations just execute `bash evaluate.sh` the script assumes that you have set the environment variables `OPENAI_API_KEY` and `OPENAI_ORGANIZATION_ID`. In our docker image, we set these to `dummy` to use the cache. If you want to use the cache, you can set these to `dummy` as well.
 
 ### New datasets or running without cache
 3.  Configure your OpenAI API key and organization in a `.env` file. You can use the provided template file as a template [lissa/env-template](./lissa/env-template).

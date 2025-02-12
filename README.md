@@ -9,7 +9,6 @@ This is the replication package for our paper "LiSSA: Toward Generic Traceabilit
 ## Structure of this Repository
 * `LiSSA-RATLR-V1` contains the code and datasets used to create the results without the significance tests. It represents a former version of the tool (i.e., without features like seed definition)
 * `LiSSA-RATLR-V2` contains the code and datasets used to create the results with the significance tests. It represents the most recent version of the tool (at the time of the paper).
-* To run all experiments in `LiSSA-RATLR-V1` and `LiSSA-RATLR-V2`, you can also just execute `bash run-experiments.sh` in the root directory of this repository.
 * Note: The most recent version of the tool can be found at [ArDoCo/LiSSA-RATLR](https://github.com/ArDoCo/LiSSA-RATLR)
 * In the current directory, you will also find some excel sheet that contain the tables of the evaluation results.
 * In `statistical-evaluation` you will find the R scripts used to perform the significance tests.
@@ -47,6 +46,8 @@ To reproduce the results of our evaluation, please follow the instructions in th
 a. `LiSSA-RATLR-V1` contains the code and datasets used to create the results without the significance tests.
 
 b. `LiSSA-RATLR-V2` contains the code and datasets used to create the runs used to perform significance tests.
+
+Note: You can run the complete evaluation using the provided `run-experiments.sh`. This script will run the evaluation for all configurations and datasets. However, the script assumes that you have already set the OpenAI API key and organization in your environment variables. If you want to use the cache and therefore do not need access to OpenAI, you can set the API key and organization to `dummy`by executing `export OPENAI_ORGANIZATION_ID=dummy` and `export OPENAI_API_KEY=dummy`. To finally, run the script, execute `bash run-experiments.sh`.
 
 ## Reusing LiSSA
 LiSSA is a framework that can be used to recover traceability links between any two types of artifacts.

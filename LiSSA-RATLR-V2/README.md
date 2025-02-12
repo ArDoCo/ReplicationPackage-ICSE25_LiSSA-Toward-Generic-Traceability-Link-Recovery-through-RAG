@@ -15,8 +15,8 @@ You can build the project using Maven using `cd lissa && mvn package` . The Jar 
 
 ## Usage
 1. Select the configuration you want to use for evaluation in `./lissa/configs`, e.g., `./lissa/configs/req2code-significance/SMOS_-102959883_artifact_artifact_reasoning_gpt_gpt-4o-2024-05-13.json`. You can also provide a directory containing multiple configurations.
-2. Configure your OpenAI API key and organization in a `.env` file. You can use the provided template file as a template [lissa/env-template](./lissa/env-template). You can set both to `dummy` if you just want to use the caches. (If you are using the docker container, this is already set up.)
-3. LiSSA caches requests in order to be reproducible. The cache is located in the cache folder. E.g., `./lissa/cahce-r2c` (Requriement to Code). You can delete the cache to force a new request.
+2. Configure your OpenAI API key and organization in a `.env` file (or directly in your environment variables). You can use the provided template file as a template [lissa/env-template](./lissa/env-template). You can set both to `dummy` if you just want to use the caches. (If you are using the docker container, this is already set up.)
+3. LiSSA caches requests in order to be reproducible. The cache is located in the cache folder. E.g., `./lissa/cache-r2c` (Requirement to Code). You can delete the cache to force a new request.
 4. Run `java -jar lissa/target/ratlr-*-jar-with-dependencies.jar eval -c configs/....` to run the evaluation. You can provide a JSON or a directory containing JSON configurations.
 5. The results will be printed to the console and saved to a file in the current directory. The name is also printed to the console.
 
