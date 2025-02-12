@@ -23,7 +23,7 @@ do
     cd ..
 done
 
-echo "Experiments for LiSSA V1 are done. The results are located in the LiSSA-RATLR-V1 folder"
+echo "Experiments for LiSSA V1 are done. The results are located in the LiSSA-RATLR-V1/evaluation/<<PROJECT>> folders"
 
 cd ../..
 
@@ -47,6 +47,6 @@ java -jar target/ratlr-0.2.0-SNAPSHOT-jar-with-dependencies.jar eval -c configs/
 echo "Running the experiments for documentation to code TLR"
 java -jar target/ratlr-0.2.0-SNAPSHOT-jar-with-dependencies.jar eval -c configs/doc2code-significance
 
-echo "Experiments for LiSSA V2 are done. The results are located in the LiSSA-RATLR-V2 folder"
+echo "Experiments for LiSSA V2 are done. The results are located in the LiSSA-RATLR-V2/lissa folder"
 
 cd ../..
