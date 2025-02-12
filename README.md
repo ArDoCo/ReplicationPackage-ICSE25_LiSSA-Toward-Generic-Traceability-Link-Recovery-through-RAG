@@ -9,9 +9,11 @@ This is the replication package for our paper "LiSSA: Toward Generic Traceabilit
 ## Structure of this Repository
 * `LiSSA-RATLR-V1` contains the code and datasets used to create the results without the significance tests. It represents a former version of the tool (i.e., without features like seed definition)
 * `LiSSA-RATLR-V2` contains the code and datasets used to create the results with the significance tests. It represents the most recent version of the tool (at the time of the paper).
+* To run all experiments in `LiSSA-RATLR-V1` and `LiSSA-RATLR-V2`, you can also just execute `bash run-experiments.sh` in the root directory of this repository.
 * Note: The most recent version of the tool can be found at [ArDoCo/LiSSA-RATLR](https://github.com/ArDoCo/LiSSA-RATLR)
 * In the current directory, you will also find some excel sheet that contain the tables of the evaluation results.
 * In `statistical-evaluation` you will find the R scripts used to perform the significance tests.
+
 
 Each of the directories contain a README that explains how to run the tool and reproduce the results.
 
