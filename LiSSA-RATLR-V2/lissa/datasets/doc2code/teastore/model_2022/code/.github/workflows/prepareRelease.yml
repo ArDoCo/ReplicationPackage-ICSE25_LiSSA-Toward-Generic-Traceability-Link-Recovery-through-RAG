@@ -1,0 +1,159 @@
+name: Release
+
+on:
+  milestone:
+    types: [closed]
+    
+jobs:
+  cypress-run:
+    name: Cypress run
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - run: |
+          mvn clean install
+          cd tools/ && ./build_docker.sh && cd ..
+          sed -i 's/descartesresearch\///g' examples/docker/docker-compose_default.yaml
+          docker-compose -f examples/docker/docker-compose_default.yaml up -d
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          working-directory: e2e-tests
+          wait-on: http://localhost:8080
+          wait-on-timeout: 120
+      - name: Cleanup docker
+        run: docker-compose -f examples/docker/docker-compose_default.yaml down --volumes --remove-orphans
+        if: ${{ always() }}
+  bumpVersion:
+    runs-on: ubuntu-latest
+    needs: [cypress-run]
+    steps: 
+      - uses: actions/checkout@v2
+        with:
+          ref: 'development'
+      - run: |
+          sed -i "s/<teastoreversion>.*<\/teastoreversion>/<teastoreversion>$(grep -o ".\..\.." <<< "${{ github.event.milestone.title }}")<\/teastoreversion>/" pom.xml
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Automated version number bump" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: development
+          
+  mergeDevelop:
+    runs-on: ubuntu-latest
+    needs: [bumpVersion]
+    steps: 
+      - run: |
+          git clone https://github.com/DescartesResearch/TeaStore.git
+          cd TeaStore
+          git remote set-url origin https://action:${{ secrets.GITHUB_TOKEN }}@github.com/DescartesResearch/TeaStore.git
+          git fetch origin
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git merge origin/development -m "Automated merge in preparation of release"
+          git push
+          
+  createRelease:
+    runs-on: ubuntu-latest
+    needs: [mergeDevelop]
+    steps:
+      - run: echo "versionname=$(grep -o ".\..\.." <<< "${{ github.event.milestone.title }}")" >> $GITHUB_ENV
+      - uses: actions/checkout@v2
+      - uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ env.versionname }}
+          release_name: ${{ github.event.milestone.title }}
+          body: ${{ github.event.milestone.description }}
+
+  build:
+    name: Build and publish Docker images of TeaStore
+    runs-on: ubuntu-latest
+    needs: [ createRelease ]
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: 'master'
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: '11'
+      - run: |
+          mvn clean install -DskipTests
+          VERSION=$(grep -o ".\..\.." <<< "${{ github.event.milestone.title }}")
+          echo "VERSION=${VERSION}" >> ${GITHUB_ENV}
+          echo "Version:_${VERSION}_"
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and push teastore-base
+        uses: docker/build-push-action@v2
+        with:
+          context: ./utilities/tools.descartes.teastore.dockerbase
+          push: true
+          tags: descartesresearch/teastore-base:latest,descartesresearch/teastore-base:${{env.VERSION}}
+
+      - name: Build and push teastore-recommender
+        uses: docker/build-push-action@v2
+        with:
+          context: ./services/tools.descartes.teastore.recommender
+          push: true
+          tags: descartesresearch/teastore-recommender:latest,descartesresearch/teastore-recommender:${{env.VERSION}}
+
+      - name: Build and push teastore-webui
+        uses: docker/build-push-action@v2
+        with:
+          context: ./services/tools.descartes.teastore.webui
+          push: true
+          tags: descartesresearch/teastore-webui:latest,descartesresearch/teastore-webui:${{env.VERSION}}
+
+      - name: Build and push teastore-image
+        uses: docker/build-push-action@v2
+        with:
+          context: ./services/tools.descartes.teastore.image
+          push: true
+          tags: descartesresearch/teastore-image:latest,descartesresearch/teastore-image:${{env.VERSION}}
+
+      - name: Build and push teastore-auth
+        uses: docker/build-push-action@v2
+        with:
+          context: ./services/tools.descartes.teastore.auth
+          push: true
+          tags: descartesresearch/teastore-auth:latest,descartesresearch/teastore-auth:${{env.VERSION}}
+
+      - name: Build and push teastore-persistence
+        uses: docker/build-push-action@v2
+        with:
+          context: ./services/tools.descartes.teastore.persistence
+          push: true
+          tags: descartesresearch/teastore-persistence:latest,descartesresearch/teastore-persistence:${{env.VERSION}}
+
+      - name: Build and push teastore-registry
+        uses: docker/build-push-action@v2
+        with:
+          context: ./services/tools.descartes.teastore.registry
+          push: true
+          tags: descartesresearch/teastore-registry:latest,descartesresearch/teastore-registry:${{env.VERSION}}
+
+      - name: Build and push teastore-db
+        uses: docker/build-push-action@v2
+        with:
+          context: ./utilities/tools.descartes.teastore.database
+          push: true
+          tags: descartesresearch/teastore-db:latest,descartesresearch/teastore-db:${{env.VERSION}}
+
+      - name: Build and push teastore-kieker-rabbitmq
+        uses: docker/build-push-action@v2
+        with:
+          context: ./utilities/tools.descartes.teastore.kieker.rabbitmq
+          push: true
+          tags: descartesresearch/teastore-kieker-rabbitmq:latest,descartesresearch/teastore-kieker-rabbitmq:${{env.VERSION}}

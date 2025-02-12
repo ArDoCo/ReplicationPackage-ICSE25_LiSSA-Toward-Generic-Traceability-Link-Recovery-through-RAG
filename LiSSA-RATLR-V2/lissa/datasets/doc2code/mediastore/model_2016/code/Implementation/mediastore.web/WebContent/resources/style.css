@@ -1,0 +1,131 @@
+body {
+	background: #fff url(#{ resource [ 'images/bg001.png' ]
+}
+
+)
+repeat-x
+
+
+;
+min-height
+
+
+:
+
+
+500
+px
+;
+
+
+
+
+}
+.logo {
+	background: url(#{ resource [ 'images/ms-logo.png' ]
+}
+
+)
+no-repeat
+
+ 
+
+;
+height
+
+
+:
+
+
+70
+px
+;
+
+
+	
+
+margin-top
+
+
+:
+
+
+25
+px
+;
+
+
+	
+
+margin-bottom
+
+
+:
+
+ 
+
+25
+px
+
+
+;
+margin-left
+
+
+:
+
+
+40
+px
+;
+
+
+	
+
+margin-right
+
+
+:
+
+
+40
+px
+;
+
+
+ 	
+
+font-family
+
+
+:
+
+
+0
+.8em
+
+
+;
+}
+#menubar {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	height: 100%;
+	width: 150px;
+}
+
+#menubar a {
+	font-size: 0.8em !important;
+}
+
+#main_container {
+	position: absolute;
+	left: 160px;
+	right: 20px;
+	clear: both;
+}
+
+.ui-widget {
+	font-size: 0.8em;
+}
