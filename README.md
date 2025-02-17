@@ -25,29 +25,43 @@ Our summarized evaluation results can be found in the excel sheets in the root d
 * Evaluation-SAD-Significance.xlsx: Contains the results of the software architecture documentation (SAD) evaluation with significance tests.
 
 ## Installation (Docker)
-We suggest to use the provided docker container as it contain everything you need to run the tool. To run the container, execute `docker run -it --rm ghcr.io/ardoco/icse25`. The container will start in this directory.
-The docker container contains everything including the cache. Thus, you do not need access to OpenAI to run the evaluation.
+> [!TIP]
+> We suggest to use the provided docker container as it contain everything you need to run the tool. To run the container, execute `docker run -it --rm ghcr.io/ardoco/icse25`. The container will start in this directory.
+> The docker container contains everything including the cache.
+> Thus, you do not need access to OpenAI to run the evaluation.
 
 ## Installation (Manual)
 You can build the projects on your own by executing `mvn package` in the `lissa` subdirectories in `LiSSA-RATLR-V1` and `LiSSA-RATLR-V2`. The Jar will be created in the target folder in the lissa project (lissa/target/ratlr-*-jar-with-dependencies.jar).
 
-To extract the cache for the evaluation, you can use the provided tar.gz file (cache.tgz).
-Since GitHub does not allow large files in releases, the cache is split into multiple parts.
-* the cache was created by `split -b 1G cache.tgz cache.tgz.part.`
-* To get the cache.tgz: `cat cache.tgz.part.* > cache.tgz`
-* `sha256sum cache.tgz`: `8e3b9d8ea7b54453605a8235aea7d33176a8635cd69bea2a0892da3b6a152881`
-
-Extract `cache.tgz` in the repository to get the caches at their desired locations (`tar xzf cache.tgz`).
+> [!WARNING]
+> To extract the cache for the evaluation, you can use the provided tar.gz file (cache.tgz).
+> Since GitHub does not allow large files in releases, the cache is split into multiple parts.
+> * the cache was created by `split -b 1G cache.tgz cache.tgz.part.`
+> * To get the cache.tgz: `cat cache.tgz.part.* > cache.tgz`
+> * `sha256sum cache.tgz`: `8e3b9d8ea7b54453605a8235aea7d33176a8635cd69bea2a0892da3b6a152881`
+> 
+> Extract `cache.tgz` in the repository to get the caches at their desired locations (`tar xzf cache.tgz`).
 
 
 ## Reproduce the Results
 To reproduce the results of our evaluation, please follow the instructions in the README of the respective directories.
 
-a. `LiSSA-RATLR-V1` contains the code and datasets used to create the results without the significance tests.
+> [!IMPORTANT]
+> You can run the complete evaluation using the provided `run-experiments.sh`.
+> This script will run the evaluation for all configurations and datasets.
+> However, the script assumes you have already set the OpenAI API key and organization in your environment variables.
+> If you want to use the cache and therefore do not need access to OpenAI, you can set the API key and organization to `dummy`by executing `export OPENAI_ORGANIZATION_ID=dummy` and `export OPENAI_API_KEY=dummy`.
+> To finally run the script, execute `bash run-experiments.sh`.
 
-b. `LiSSA-RATLR-V2` contains the code and datasets used to create the runs used to perform significance tests.
+> [!NOTE]
+> `LiSSA-RATLR-V1` contains the code and datasets used to create the results without the significance tests.
+> The README in the directory contains more information about the command line parameters, i.e., the [evaluate.sh](https://github.com/ArDoCo/ReplicationPackage-ICSE25_LiSSA-Toward-Generic-Traceability-Link-Recovery-through-RAG/blob/main/LiSSA-RATLR-V1/evaluation/smos/evaluate.sh) scripts that can be used to run the experiments.
 
-Note: You can run the complete evaluation using the provided `run-experiments.sh`. This script will run the evaluation for all configurations and datasets. However, the script assumes that you have already set the OpenAI API key and organization in your environment variables. If you want to use the cache and therefore do not need access to OpenAI, you can set the API key and organization to `dummy`by executing `export OPENAI_ORGANIZATION_ID=dummy` and `export OPENAI_API_KEY=dummy`. To finally, run the script, execute `bash run-experiments.sh`.
+
+> [!NOTE]
+> `LiSSA-RATLR-V2` contains the code and datasets used to create the runs used to perform significance tests.
+> The README in the directory contains more information about the command line parameters, i.e., the explanation that you can run the experiments by specifying the configurations and run `java -jar compiled-lissa.jar eval -c config.json`
+
 
 ## Reusing LiSSA
 LiSSA is a framework that can be used to recover traceability links between any two types of artifacts.
