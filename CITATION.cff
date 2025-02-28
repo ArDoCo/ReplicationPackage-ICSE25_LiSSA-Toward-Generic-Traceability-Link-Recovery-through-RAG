@@ -1,0 +1,71 @@
+cff-version: 1.2.0
+title: >-
+  LiSSA: Toward Generic Traceability Link Recovery through RAG
+message: >-
+  LiSSA: Toward Generic Traceability Link Recovery through RAG
+type: software
+authors:
+  - family-names: Fuchß
+    given-names: Dominik
+    orcid: 'https://orcid.org/0000-0001-6410-6769'
+  - family-names: Hey
+    given-names: Tobias
+    orcid: 'https://orcid.org/0000-0003-0381-1020'
+  - family-names: Keim
+    given-names: Jan
+    orcid: 'https://orcid.org/0000-0002-8899-7081'
+  - family-names: Liu
+    given-names: Haoyu
+    orcid: 'https://orcid.org/0009-0002-7676-5010'
+  - family-names: Ewald
+    given-names: Niklas
+    orcid: 'https://orcid.org/0009-0000-8868-0562'
+  - family-names: Thirolf
+    given-names: Tobias
+    orcid: 'https://orcid.org/0009-0006-7052-4020'
+  - family-names: Koziolek
+    given-names: Anne
+    orcid: 'https://orcid.org/0000-0002-1593-3394'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.14714706
+    description: Replication Package
+repository-code: >-
+  https://github.com/ArDoCo/ReplicationPackage-ICSE25_LiSSA-Toward-Generic-Traceability-Link-Recovery-through-RAG
+url: 'https://ardoco.de/c/icse25'
+repository-artifact: >-
+  https://github.com/ArDoCo/ReplicationPackage-ICSE25_LiSSA-Toward-Generic-Traceability-Link-Recovery-through-RAG
+abstract: >
+  There are a multitude of software artifacts which need to
+  be handled during the development and maintenance of a
+  software system. These artifacts interrelate in multiple,
+  complex ways. Therefore, many software engineering tasks
+  are enabled — and even empowered — by a clear
+  understanding of artifact interrelationships and also by
+  the continued advancement of techniques for automated
+  artifact linking.
+  However, current approaches in automatic Traceability Link
+  Recovery (TLR) target mostly the links between specific
+  sets of artifacts, such as those between requirements and
+  code. Fortunately, recent advancements in Large Language
+  Models (LLMs) can enable TLR approaches to achieve broad
+  applicability. Still, it is a nontrivial problem how to
+  provide the LLMs with the specific information needed to
+  perform TLR.
+  In this paper, we present LiSSA, a framework that
+  harnesses LLM performance and enhances them through
+  Retrieval-Augmented Generation (RAG). We empirically
+  evaluate LiSSA on three different TLR tasks, requirements
+  to code, documentation to code, and architecture
+  documentation to architecture models, and we compare our
+  approach to state-of-the-art approaches.
+  Our results show that the RAG-based approach can
+  significantly outperform the state-of-the-art on the
+  code-related tasks. However, further research is required
+  to improve the performance of RAG-based approaches to be
+  applicable in practice.
+keywords:
+  - Traceability Link Recovery
+  - Retrieval-Augmented Generation
+  - Large Language Models
+
