@@ -1,6 +1,16 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14714706.svg)](https://doi.org/10.5281/zenodo.14714706)
+
+<div style="display: flex; align-items: center;">
+  <img src="https://www.acm.org/binaries/content/gallery/acm/publications/artifact-review-v1_1-badges/artifacts_available_v1_1.png" width="85" />
+  <img src="https://www.acm.org/binaries/content/gallery/acm/publications/artifact-review-v1_1-badges/artifacts_evaluated_functional_v1_1.png" width="85" />
+  <img src="https://www.acm.org/binaries/content/gallery/acm/publications/artifact-review-v1_1-badges/artifacts_evaluated_reusable_v1_1.png" width="85" />
+</div>
 
 # Replication Package for "LiSSA: Toward Generic Traceability Link Recovery through Retrieval-Augmented Generation"
-This is the replication package for our paper "LiSSA: Toward Generic Traceability Link Recovery through Retrieval-Augmented Generation". This package contains the source code for the LiSSA tool, the dataset used in the evaluation, and the results of the evaluation.
+by Dominik Fuchß, Tobias Hey, Jan Keim, Haoyu Liu, Niklas Ewald, Tobias Thirolf, and Anne Koziolek 
+
+This is the replication package for our paper "LiSSA: Toward Generic Traceability Link Recovery through Retrieval-Augmented Generation".
+This package contains the source code for the LiSSA tool, the dataset used in the evaluation, and the evaluation results.
 
 ## Requirements
 - Java JDK 21 + Maven 3
@@ -10,14 +20,14 @@ This is the replication package for our paper "LiSSA: Toward Generic Traceabilit
 * `LiSSA-RATLR-V1` contains the code and datasets used to create the results without the significance tests. It represents a former version of the tool (i.e., without features like seed definition)
 * `LiSSA-RATLR-V2` contains the code and datasets used to create the results with the significance tests. It represents the most recent version of the tool (at the time of the paper).
 * Note: The most recent version of the tool can be found at [ArDoCo/LiSSA-RATLR](https://github.com/ArDoCo/LiSSA-RATLR)
-* In the current directory, you will also find some excel sheet that contain the tables of the evaluation results.
-* In `statistical-evaluation` you will find the R scripts used to perform the significance tests.
+* In the current directory, you will also find some Excel sheet that contain the tables of the evaluation results.
+* In `statistical-evaluation`, you will find the R scripts used to perform the significance tests.
 
 
-Each of the directories contain a README that explains how to run the tool and reproduce the results.
+Each of the directories contains a README that explains how to run the tool and reproduce the results.
 
 ### Evaluation Results
-Our summarized evaluation results can be found in the excel sheets in the root directory of this repository. The excel sheets contain the results of the evaluation for the different datasets and configurations.
+Our summarized evaluation results can be found in the Excel sheets in the root directory of this repository. The Excel sheets contain the evaluation results for the different datasets and configurations.
 
 * Evaluation-Req2Code.xlsx: Contains the results of the requirement to code evaluation.
 * Evaluation-Req2Code-Significance.xlsx: Contains the results of the requirement to code evaluation with significance tests.
@@ -26,8 +36,8 @@ Our summarized evaluation results can be found in the excel sheets in the root d
 
 ## Installation (Docker)
 > [!TIP]
-> We suggest to use the provided docker container as it contain everything you need to run the tool. To run the container, execute `docker run -it --rm ghcr.io/ardoco/icse25`. The container will start in this directory.
-> The docker container contains everything including the cache.
+> We suggest using the provided docker container, as it contains everything you need to run the tool. To run the container, execute `docker run -it --rm ghcr.io/ardoco/icse25`. The container will start in this directory.
+> The docker container contains everything, including the cache.
 > Thus, you do not need access to OpenAI to run the evaluation.
 
 ## Installation (Manual)
@@ -81,4 +91,4 @@ LiSSA contains multiple modules that can be used or extended:
 * `embeddingcreator`: Creates embeddings for the artifacts. Providers are currently OpenAI, Ollama, and Onnx.
 * `classifier`: Here, the prompts and LLMs are defined. Here, you can define new classifiers, change prompts, or change the LLMs.
 * `resultaggregator`: Aggregates the results of the classifier. This is used to get the traceability links on the right level of granularity.
-* `postprocessor`: Postprocesses the results of the classifier. Mostly used for changing the identifiers to match the format of the gold standards.
+* `postprocessor`: Postprocesses the results of the classifier. It is mostly used for changing the identifiers to match the format of the gold standards.
